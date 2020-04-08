@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- import CSS -->
+    <link rel="stylesheet" type="text/css" href="lib/reset.css">
+    <link rel="stylesheet" type="text/css" href="lib/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <el-container>
+            <el-container>
+                <el-main>
+                    <el-divider></el-divider>
+                    <el-row :gutter="12">
+                        <el-col :span="8">
+                            <el-card shadow="always">
+                                <div>
+                                    <h3>Account</h3>
+                                </div>
+                                <br />
+                                <div>
+                                    <span>
+                                        Some text content
+                                    </span>
+                                </div>
+                                <br />
+                                <div>
+                                    <el-dropdown>
+                                        <el-link type="primary">Manage<i class="el-icon-arrow-down el-icon--right"></i>
+                                        </el-link>
+                                        <el-dropdown-menu slot="dropdown">
+                                            <el-dropdown-item>Action 1</el-dropdown-item>
+                                            <el-dropdown-item>Action 2</el-dropdown-item>
+                                            <el-dropdown-item>Action 3</el-dropdown-item>
+                                            <el-dropdown-item>Action 4</el-dropdown-item>
+                                            <el-dropdown-item>Action 5</el-dropdown-item>
+                                        </el-dropdown-menu>
+                                    </el-dropdown>
+                                    <el-link type="danger">Delete</el-link>
+                                    </el-footer>
+                                </div>
+                            </el-card>
+                        </el-col>
+                        <el-col :span="8">
+                            <el-card shadow="never">
+                                <div>
+                                    <h3>User Card</h3>
+                                </div>
+                            </el-card>
+                        </el-col>
+                    </el-row>
+                    <br />
+                    <el-row>
+                        <el-dropdown>
+                            <el-button>Default<i class="el-icon-arrow-down el-icon--right"></i>
+                            </el-button>
+                            <el-dropdown-menu slot="dropdown">
+                                <el-dropdown-item>Action 1</el-dropdown-item>
+                                <el-dropdown-item>Action 2</el-dropdown-item>
+                                <el-dropdown-item>Action 3</el-dropdown-item>
+                                <el-dropdown-item>Action 4</el-dropdown-item>
+                                <el-dropdown-item>Action 5</el-dropdown-item>
+                            </el-dropdown-menu>
+                        </el-dropdown>
+                        <el-button type="primary" icon="el-icon-share">Primary</el-button>
+                        <el-button type="success">Success</el-button>
+                        <el-button type="info">Info</el-button>
+                        <el-button type="warning">Warning</el-button>
+                        <el-button type="danger">Danger</el-button>
+                    </el-row>
+                    <br />
+                    <el-row>
+                        <el-button plain>Plain</el-button>
+                        <el-button type="primary" plain>Primary</el-button>
+                        <el-button type="success" plain>Success</el-button>
+                        <el-button type="info" plain>Info</el-button>
+                        <el-button type="warning" plain>Warning</el-button>
+                        <el-button type="danger" plain>Danger</el-button>
+                    </el-row>
+                    <br />
+                    <el-row>
+                        <el-button>Default</el-button>
+                        <el-button type="primary" size="medium">Primary</el-button>
+                        <el-button type="success" size="small">Success</el-button>
+                    </el-row>
+                    <br /><br />
+                    <el-row>
+                        <el-button type="text default">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                        </el-button>
+                        <el-button type="text primary">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                        </el-button>
+                        <el-button type="text info">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                        </el-button>
+                        <el-button type="text danger">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                        </el-button>
+                        <el-button type="text success">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                        </el-button>
+                        <el-button type="text warning">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                        </el-button>
+                    </el-row>
+                    <br />
+                    <el-row>
+                        <el-cell :span="12">
+                            <el-input placeholder=" Please input" v-model="input">
+                            </el-input>
+                            <el-input placeholder="Please input" v-model="input" :disabled="true">
+                            </el-input>
+                        </el-cell>
+                    </el-row>
+                    <br />
+                    <el-row>
+                        <el-cell>
+                            Dark Tags:
+                            <el-tag size="mini" effect="dark" type="primary">Primary</el-tag>
+                            <el-tag size="mini" effect="dark" type="warning">Warning</el-tag>
+                            <el-tag size="mini" effect="dark" type="info">Info</el-tag>
+                            <el-tag size="mini" effect="dark" type="danger">Danger</el-tag>
+                            <el-tag size="mini" effect="dark" type="success">Success</el-tag>
+                            <br /><br />Plain Tags:
+                            <el-tag size="mini" effect="plain">Primary</el-tag>
+                            <el-tag size="mini" effect="plain" type="warning">Warning</el-tag>
+                            <el-tag size="mini" effect="plain" type="info">Info</el-tag>
+                            <el-tag size="mini" effect="plain" type="danger">Danger</el-tag>
+                            <el-tag size="mini" effect="plain" type="success">Success</el-tag>
+                            <br /><br />Light Tags:
+                            <el-tag size="mini" effect="light">Primary</el-tag>
+                            <el-tag size="mini" effect="light" type="warning">Warning</el-tag>
+                            <el-tag size="mini" effect="light" type="info">Info</el-tag>
+                            <el-tag size="mini" effect="light" type="danger">Danger</el-tag>
+                            <el-tag size="mini" effect="light" type="success">Success</el-tag>
+                        </el-cell>
+                    </el-row>
+                </el-main>
+                <!--<el-footer>Footer</el-footer>-->
+            </el-container>
+        </el-container>
+    </div>
+</body>
+<!-- import Vue before Element -->
+<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>-->
+<script src="scripts/vue.js"></script>
+<script src="scripts/elements-ui.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function () {
+            return { visible: false }
+        }
+    })
+</script>
+<script>
+    export default {
+        data() {
+            return {
+                input: 'test me',
+                isCollapse: true
+            }
+        }
+    }
+</script>
+
+</html>

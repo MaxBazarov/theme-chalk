@@ -1,0 +1,543 @@
+@import "cb-modern-ui-vars.scss";
+
+//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// OVERWRITE CSS ////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+// Setup font familty to override User Agent settings
+input, textarea, keygen, select, button {
+    font-family: $font-face-regular;
+}
+
+// Custom font size foe H1
+h1 {
+    font-size:                  $font-xx-large;
+}
+
+// Setup custom weight for h3
+h3 {
+    font-weight:                $font-weight-medium;
+  }
+
+
+.cb-page-description{
+    @extend h3;
+    margin-top:                                     $space-x-large;
+    margin-bottom:                                  $space-x-large;
+    color:                                          $color-text-secondary;
+    font-weight:                                    $font-weight-normal;
+    line-height:                                    $font-large * $line-height-large;
+}
+
+/////////////// TOP BAR ///////////////////////////////////
+.cb-topbar-label {
+    line-height:                $top-bar-height;
+}
+.cb-topbar-icon {
+    font-size:                  $top-bar-item-icon-font;
+}
+.cb-sidebar-back {
+    background-color:           $side-bar-background;
+    //width:                      $side-bar-width;    
+}
+
+
+/////////////////////// TABLE ///////////////////////////
+.el-table{
+    border-radius:                              $radius;
+    border-color:                               $color-border;
+    box-shadow:                                 $card-regular-shadow;
+    background-color:                           $color-background-container;
+    border-position:                            inside;
+}
+/*
+.el-table th{
+    border:                                         none;
+    background-color:                                   $table-head-background; 
+    box-shadow:                                         $table-head-background-shadow;
+    height:                                             $table-head-height;
+}*/
+.el-table td{
+    border-right:                                    none;
+    background-color:                                   $table-item-background; 
+}
+/*
+.el-table tr{
+    background-color:                                   transparent; 
+}
+*/
+.el-table__header tr{    
+    background-color:                                   $table-head-background; 
+    height:                                            $table-head-height; 
+}
+table.el-table__header{
+    box-shadow:                                         $table-head-background-shadow;
+}
+.el-table__row{
+    border-right:                                    none;
+    border-left:                                      none;
+    border-bottom:                                      none;    
+    border-top:                                      none;    
+    background-color:                                   $table-item-background; 
+    height:                                            $table-item-height; 
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td{
+    background-color:                                   $table-item-striped-background;     
+    border-bottom:                                      none;    
+}
+.el-table__row td{
+    border-bottom:                                      none;    
+    box-shadow:                                         $table-head-background-shadow;
+}
+.el-table--border tr th.is-leaf{
+    border-right:                                    none;
+    border-left:                                      none;
+    border-bottom:                                      none;    
+}
+.el-table th>.cell{
+    font-size:                                      $table-head-text-size;
+    font-weight:                                    $table-head-text-weight;
+    letter-spacing:                                 $table-head-text-letter-spacing;
+    font-family:                                    $font-face-regular;
+    //line-height:                                    $table-head-height;      
+    color:                                          $table-head-text-color;
+}
+
+///////////////////// TABS BAR /////////////////////
+.el-tabs__item{
+    padding:                    0 $tabs-item-padding-leftright;
+}
+
+.el-tabs{
+    padding-bottom:             $space-x-large;
+}
+///////////////////// SIDE BAR /////////////////////
+div#app > section.el-container{
+    height:                     100vh;
+}
+
+.cb-sidebar {
+    border-right:              none;
+}
+.cb-sidebar .el-menu-item *{ 
+    font-weight:                 $side-bar-item-weight;
+    line-height:                 $side-bar-item-height;
+}
+.cb-sidebar .el-submenu__title *{ 
+    font-weight:                 $side-bar-item-weight;
+    line-height:                 $side-bar-item-height;
+    height:                      $side-bar-item-height;
+}
+.cb-sidebar *[class^="el-icon-"]{ 
+    font-size:                   24px;
+    color:                       $side-bar-item-text;
+}
+.cb-sidebar .el-menu-item{ 
+    line-height:                 $side-bar-item-height;
+    height:                      $side-bar-item-height;
+}
+
+.cb-sidebar .el-menu-item:hover, .el-submenu__title:hover, i:hover {
+    background-color:             $side-bar-item-background-hovered;
+    color:                        $side-bar-item-text-hovered;
+}
+.cb-sidebar .el-menu-item:focus, .el-submenu__title:focus, i:focus{
+    background-color:             $side-bar-item-background-hovered;
+    color:                        $side-bar-item-text-hovered;
+}
+
+.cb-sidebar .el-submenu__icon-arrow {
+    display:                    none;
+}
+
+.cb-sidebar .el-menu--inline{
+    padding-left:                 $side-bar-sub-item-padding-left;
+}
+
+.cb-sidebar .el-menu--inline  li{
+    color:                        $side-bar-sub-item-text;
+    font-size:                    $side-bar-sub-item-font;
+    font-weight:                  $side-bar-sub-item-weight;
+    line-height:                  $side-bar-sub-item-height;
+    padding-left:                 52px;
+}
+
+.cb-sidebar-bottom{
+    position:                    absolute;
+    bottom:                      $side-bar-margin-bottom;
+    left:                        0; 
+}
+
+////////////////////////////// TAGS ////////////////////////////////////
+.el-tag--mini{
+    height:                      $tag-height-Mini;
+    font-size:                   $tag-text-font-size-Mini;
+    font-weight:                 $tag-text-font-weight-Mini;
+    line-height:                 $tag-height-Mini;
+    text-transform:              $tag-text-transform;
+    display:                     inline;
+    padding:                     0 $tag-text-margin;
+}
+.el-tag--light{
+    background-color:           $tag-light-primary-background-color;
+    border-color:               $tag-light-primary-border-color;
+}
+.el-tag--light.el-tag--warning{
+    background-color:           $tag-light-warning-background-color;
+    border-color:               $tag-light-warning-border-color;
+}
+.el-tag--light.el-tag--danger{
+    background-color:           $tag-light-danger-background-color;
+    border-color:               $tag-light-danger-border-color;
+}
+.el-tag--light.el-tag--success{
+    background-color:           $tag-light-success-background-color;
+    border-color:               $tag-light-success-border-color;
+}
+.el-tag--light.el-tag--info{
+    background-color:           $tag-light-info-background-color;
+    border-color:               $tag-light-info-border-color;
+}
+.el-tag--dark{
+    color:                      $tag-dark-text-color;
+}
+
+////////////////////////////// CUSTOM INVERSIVE BUTTONS ////////////////////////////////////
+.cb-button-contrast{
+    border-color:               $button-contrast-border-color;
+    color:                      $button-contrast-text-color;
+    background-color:           transparent;
+}
+
+////////////////////////////// TEXT BUTTONS ////////////////////////////////////
+.el-button--text.default{
+    color:                      $color-text-default;
+}
+.el-button--text.primary{
+    color:                      $color-text-brand;
+}
+.el-button--text.info{
+    color:                      $color-text-secondary;
+}
+.el-button--text.success{
+    color:                      $color-text-success;
+}
+.el-button--text.danger{
+    color:                      $color-text-danger;
+}
+.el-button--text.warning{
+    color:                      $color-text-warning;
+}
+
+////////////////////////////// CB MARKETPLACE STYLES ////////////////////////////////////
+
+// Browser / Plan
+.cb-marketplace-plan:hover{
+    cursor:                                     pointer;
+    background:                                 $mp-plan-background-hover;
+}
+
+.cb-marketplace-plan img.plan-icon{
+    width:                                      $mp-service-icon-medium-size;
+    height:                                     $mp-service-icon-medium-size;
+    border-radius:                              $mp-service-icon-medium-border-radius;
+}
+
+.cb-marketplace-plan td:nth-child(1){
+    width:                                      $mp-service-icon-medium-size;
+}
+.cb-marketplace-plan .plan-content{
+    padding-left:                               $mp-plan-content-margin-left;
+    padding-top:                                $mp-plan-content-margin-top;
+    vertical-align:                             top;
+ 
+}
+.cb-marketplace-plan .plan-label{
+    @extend h3;
+    vertical-align:                             top;
+    line-height:                                $mp-plan-label-line-height;
+}
+.cb-marketplace-plan .plan-vendor{
+    color:                                      $mp-plan-vendor-color;
+    font-size:                                  $mp-plan-vendor-font-size;
+    font-family:                                $font-face-regular; 
+    font-weight:                                $mp-plan-vendor-font-weight;
+    display:                                    inline;
+    vertical-align:                             top;
+    line-height:                                $mp-plan-vendor-line-height;
+}
+.cb-marketplace-plan .plan-price{
+    color:                                      $mp-plan-price-color;
+    font-size:                                  $mp-plan-price-font-size;
+    font-family:                                $font-face-regular; 
+    font-weight:                                $mp-plan-price-font-weight;
+    display:                                    inline;
+    vertical-align:                             top;
+    line-height:                                $mp-plan-price-line-height;
+}
+.cb-marketplace-plan .plan-content{
+    padding-left:                               $mp-plan-content-margin-left;
+    padding-top:                                $mp-plan-content-margin-top;
+    vertical-align:                             top;
+ 
+}
+
+// Product / Header
+.cb-marketplace-product .header{
+    background:                                 $mp-product-header-background-color;
+    padding:                                    $mp-product-header-space;
+    border-radius:                              $mp-product-header-border-radius;
+}
+.cb-marketplace-product .header .content{    
+    padding-left:                                $mp-product-header-content-margin-left;
+    vertical-align:                             top;
+}
+
+.cb-marketplace-product img.icon{
+    width:                                      $mp-service-icon-large-size;
+    height:                                     $mp-service-icon-large-size;
+    border-radius:                              $mp-service-icon-large-border-radius;
+}
+.cb-marketplace-product .header .product{
+    @extend h1;
+    color:                                      $color-text-default-contrast;
+    vertical-align:                             top;
+    line-height:                                $font-x-large * $line-height-medium;
+}
+.cb-marketplace-product .header .vendor{
+    color:                                      $color-text-default-contrast;
+    opacity:                                    $mp-product-header-vendor-text-opacity;
+    vertical-align:                             top;
+    line-height:                                $font-medium * $line-height-medium;
+}
+//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////// ELEMENT TOKENS ////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
+
+/* Color
+-------------------------- */
+/// color|1|Brand Color|0
+$--color-primary:               $color-primary;
+$--color-white:                 $color-white;
+$--color-black:                 $color-black;
+$--color-success:               $color-success;
+$--color-warning:               $color-warning;
+$--color-danger:                $color-danger;
+$--color-info:                  $color-secondary;
+$--color-text-primary:          $color-text;
+$--color-text-regular:          $color-text;
+$--color-text-secondary:        $color-text-secondary;
+$--color-text-placeholder:      $color-text-disabled-contrast;
+$--border-color-base:           $color-border;
+
+/* Border
+-------------------------- */
+$--border-base:                 $button-border-width solid $color-border;
+
+
+/* Tab
+-------------------------- */
+$--tab-font-size:               $tabs-item-text-font-size;
+$--tab-border-line:             $tabs-item-line-regular-color;
+$--tab-header-color-active:     $tabs-item-text-selected-color;
+$--tab-header-color-hover:      $tabs-item-text-selected-color;
+$--tab-header-color:            $tabs-item-text-regular-color;
+$--tab-header-fill-active:      rgba($--color-black, 0.06) !default;
+$--tab-header-fill-hover:       rgba($--color-black, 0.06) !default;
+//$--tab-vertical-header-width:   90px !default;
+//$--tab-vertical-header-count-color: $--color-white !default;
+//$--tab-vertical-header-count-fill: $--color-text-secondary !default;
+
+/* Table
+-------------------------- */
+/// color||Color|0
+$--table-border-color:                      $color-border;
+//$--table-border:                            none;
+$--table-font-color:                        $color-text-default;
+$--table-header-font-color:                 $table-head-text-color;
+//$--table-row-hover-background-color: $--background-color-base !default;
+//$--table-current-row-background-color: $--color-primary-light-9 !default;
+$--table-header-background-color:           $table-head-background;
+
+
+/* Button
+-------------------------- */
+// TODO: We have much more margings in Sketch - what to do?
+$--button-font-size: $font-medium;
+$--button-font-weight: $font-weight-normal;
+$--button-border-radius: $radius;
+
+$--button-padding-vertical:             ($button-height-Large - $button-font-size-Large - $button-border-width *2)/2;
+$--button-padding-horizontal:           $button-label-margin-left-Large;
+
+$--button-medium-font-size: $font-medium;
+$--button-medium-font-weight: $font-weight-normal;
+$--button-medium-border-radius: $radius;
+$--button-medium-padding-vertical:      ($button-height-Medium - $button-font-size-Medium - $button-border-width*2)/2;
+$--button-medium-padding-horizontal:    $button-label-margin-left-Medium;
+
+
+$--button-small-font-size: $font-small;
+$--button-small-border-radius:  $radius-small;
+$--button-small-padding-vertical:      ($button-height-Small - $button-font-size-Small - $button-border-width*2)/2;
+$--button-small-padding-horizontal:    $button-label-margin-left-Small;
+
+$--button-default-font-color: $color-text-default;
+$--button-default-background-color: $color-white;
+$--button-default-border-color: $color-border;
+
+//$--button-disabled-font-color: $--color-text-placeholder !default;
+//$--button-disabled-background-color: $--color-white !default;
+//$--button-disabled-border-color: $--border-color-lighter !default;
+
+$--button-primary-border-color: $color-border-primary;
+$--button-primary-font-color:       $color-text-primary-contrast;
+$--button-primary-background-color: $color-background-primary;
+
+$--button-success-border-color: $color-border-success;
+$--button-success-font-color:       $color-text-primary-contrast;
+$--button-success-background-color: $color-background-success;
+
+$--button-warning-border-color: $color-border-warning;
+$--button-warning-font-color:       $color-text-primary-contrast;
+$--button-warning-background-color: $color-background-warning;
+
+$--button-danger-border-color: $color-border-danger;
+$--button-danger-font-color:        $color-text-primary-contrast;
+$--button-danger-background-color: $color-background-danger;
+
+$--button-info-border-color: $color-border-secondary;
+$--button-info-font-color:          $color-text-primary-contrast;
+$--button-info-background-color: $color-background-secondary;
+
+//$--button-hover-tint-percent: 20% !default;
+//$--button-active-shade-percent: 10% !default;
+
+
+/* Input
+-------------------------- 
+TODO: 
+1) Elements hardcodes:
+   padding: 5px 15px;
+   What to do it with it?
+
+*/
+$--input-font-size:                 $text-input-font-size-Large;
+$--input-font-color:                $color-text;
+$--input-height:                    $widget-large;
+$--input-border:                    $--border-base;
+$--input-border-color:              $color-border;
+$--input-border-radius:             $radius-medium;
+//$--input-border-color-hover:      $--border-color-hover !default;
+$--input-background-color:          $color-background-container;
+$--input-fill-disabled:             $color-background-disabled;
+$--input-color-disabled:            $color-text-disabled;
+$--input-icon-color:                $color-text-disabled-contrast;
+$--input-placeholder-color:         $color-text-disabled-contrast;
+//$--input-hover-border: $--border-color-hover !default;
+//$--input-clear-hover-color: $--color-text-secondary !default;
+$--input-focus-border:              $color-border-active;
+$--input-focus-fill:                $color-background-container;
+
+$--input-disabled-fill:             $color-background-disabled;
+$--input-disabled-border:           $color-border-disabled;
+$--input-disabled-color:            $color-text-disabled;
+$--input-disabled-placeholder-color: $color-text-disabled-contrast;
+
+$--input-medium-font-size:          $text-input-font-size-Medium;
+$--input-medium-height:             $widget-medium;
+$--input-small-font-size:           $text-input-font-size-Small;
+$--input-small-height:              $widget-small;
+$--input-mini-font-size:            $text-input-font-size-Mini;
+$--input-mini-height:               $widget-mini;
+
+
+// Box-shadow
+$--box-shadow-base:                 $shadow-medium;
+$--box-shadow-dark:                 $shadow-x-large;
+$--box-shadow-light:                $shadow-large;
+
+/* Typography
+-------------------------- */
+//$--font-path: 'fonts' !default;
+$--font-display:                    $font-face-regular;
+$--font-size-extra-large:           $font-xx-large;
+$--font-size-large:                 $font-x-large;
+$--font-size-medium:                $font-large;
+$--font-size-base:                  $font-medium;
+$--font-size-small:                 $font-small;
+$--font-size-extra-small:           $font-small;
+
+//$--font-weight-primary:             500 !default;
+//$--font-weight-secondary:           100 !default;
+//$--font-line-height-primary: 24px !default;
+//$--font-line-height-secondary: 16px !default;
+//$--font-color-disabled-base: #bbb !default;
+
+
+/* Card
+--------------------------*/
+/// color||Color|0
+$--card-border-color:                $color-border;
+$--card-border-radius:               $radius;
+$--card-padding:                     $card-padding;
+
+
+/* Header
+  --------------------------*/
+$--header-padding:                  0px $content-padding 0px $content-padding;
+
+/* Main
+--------------------------*/
+$--main-padding:                    0px $content-padding $space-x-large $content-padding;
+
+
+/* Backtop
+--------------------------*/
+$--backtop-background-color:        $top-bar-background;
+$--backtop-font-color:              $top-bar-item-text;
+// TODO SHADOW ???  $top-bar-background-shadow
+//$--backtop-hover-background-color:  $--border-color-extra-light !default;
+
+
+
+/* Link
+--------------------------*/
+/// fontSize||Font|1
+$--link-font-size:                  $font-medium;
+$--link-font-weight:                $font-weight-medium;
+$--link-default-font-color:         $color-text;
+//$--link-default-active-color:       $color-text-brand;
+$--link-disabled-font-color:        $color-text-default-fade;
+$--link-primary-font-color:         $color-text-brand;
+$--link-success-font-color:         $color-text-success;
+$--link-warning-font-color:         $color-text-warning;
+$--link-danger-font-color:          $color-text-danger;
+$--link-info-font-color:            $color-text-secondary;
+
+
+/* Backtop
+--------------------------*/
+$--backtop-background-color:        $color-background-stage;
+//$--backtop-font-color: $--color-primary !default;
+//$--backtop-hover-background-color: $--border-color-extra-light !default;
+
+
+/* Menu
+--------------------------*/
+$--menu-item-font-size:             $side-bar-item-font;
+$--menu-item-font-color:            $side-bar-item-text;
+$--menu-background-color:           $side-bar-background;
+$--menu-item-hover-fill:            $side-bar-item-text-hovered;
+
+
+/* Tag
+-------------------------- */
+$--tag-info-color:                  $color-secondary;
+$--tag-primary-color:               $color-primary;
+$--tag-success-color:               $color-success;
+$--tag-warning-color:               $color-warning;
+$--tag-danger-color:                $color-danger;
+$--tag-font-size:                   12px !default;
+$--tag-border-radius:               $tag-border-radius;
+$--tag-padding:                     0 $tag-text-margin;
