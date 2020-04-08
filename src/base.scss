@@ -1,2 +1,20 @@
 @import "common/transition.scss";
 @import "icon.scss";
+
+// Import Font Awesome 5 Free
+$fa-css-prefix: 'el-icon-fa';
+$fa-font-path: './fonts';
+
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+
+// Override Element UI's icon font
+.fas {
+  font-family: 'Font Awesome 5 Free' !important;
+}
+
+.fab {
+  font-family: 'Font Awesome 5 Brands' !important;
+}
+// ======================

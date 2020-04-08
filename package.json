@@ -27,9 +27,11 @@
   "homepage": "https://github.com/ElementUI/theme-chalk#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-cssmin": "^0.1.7",
-    "gulp-sass": "^3.1.0",
-    "gulp-autoprefixer": "^4.0.0"
+    "gulp-sass": "^3.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0"
+  }
 }

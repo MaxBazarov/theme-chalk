@@ -22,4 +22,10 @@ function copyfont() {
     .pipe(dest('./lib/fonts'));
 }
 
-exports.build = series(compile, copyfont);
+function copyfontFa() {
+  return src('node_modules/@fortawesome/fontawesome-free/webfonts/**')
+    .pipe(cssmin())
+    .pipe(dest('./lib/fonts'));
+}
+
+exports.build = series(compile, copyfont, copyfontFa);
