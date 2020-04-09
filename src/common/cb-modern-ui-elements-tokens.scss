@@ -20,6 +20,18 @@ h3 {
   }
 
 
+small{
+    color:                                          $color-text-secondary;
+}
+
+span.success{
+    color:                                          $color-text-success;
+}
+span.danger{
+    color:                                          $color-text-danger;
+}
+
+
 .cb-page-description{
     @extend h3;
     margin-top:                                     $space-x-large;
@@ -30,11 +42,15 @@ h3 {
 }
 
 /////////////// TOP BAR ///////////////////////////////////
+div.cb-topbar{
+    display: flex;    align-items: center;
+}
 .cb-topbar-label {
     line-height:                $top-bar-height;
 }
 .cb-topbar-icon {
     font-size:                  $top-bar-item-icon-font;
+    color:                      $color-text;
 }
 .cb-sidebar-back {
     background-color:           $side-bar-background;
@@ -128,13 +144,20 @@ div#app > section.el-container{
     line-height:                 $side-bar-item-height;
     height:                      $side-bar-item-height;
 }
-.cb-sidebar *[class^="el-icon-"]{ 
-    font-size:                   24px;
+.cb-sidebar .fas{ 
+    font-size:                   $side-bar-item-icon-font;
     color:                       $side-bar-item-text;
 }
 .cb-sidebar .el-menu-item{ 
     line-height:                 $side-bar-item-height;
     height:                      $side-bar-item-height;
+}
+
+.cb-sidebar .el-menu-item span{
+    margin-left:                 10px;
+} 
+.cb-sidebar .el-submenu span{
+    margin-left:                 10px;
 }
 
 .cb-sidebar .el-menu-item:hover, .el-submenu__title:hover, i:hover {
@@ -159,7 +182,7 @@ div#app > section.el-container{
     font-size:                    $side-bar-sub-item-font;
     font-weight:                  $side-bar-sub-item-weight;
     line-height:                  $side-bar-sub-item-height;
-    padding-left:                 52px;
+    padding-left:                 62px;
 }
 
 .cb-sidebar-bottom{

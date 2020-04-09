@@ -19,34 +19,34 @@
                             @close="handleClose">
 
                             <el-menu-item index="0">
-                                <i class="el-icon-s-fold"></i>
+                                <i class="el-icon-fa-align-left fas"></i>
                                 <img src="images/panel-logo-menu.png"></img>
                             </el-menu-item>
 
                             <el-menu-item index="1">
-                                <i class="el-icon-discover"></i>
+                                <i class="el-icon-fa-compass fas"></i>
                                 <span>Dashboard</span>
                             </el-menu-item>
 
                             <el-menu-item index="2">
-                                <i class="el-icon-s-shop"></i>
+                                <i class="el-icon-fa-store fas"></i>
                                 <span>Marketplace</span>
                             </el-menu-item>
 
                             <el-submenu index="3">
                                 <template slot="title">
-                                    <i class="el-icon-user-solid"></i>
+                                    <i class="el-icon-fa-user-friends fas"></i>
                                     <span>Accounts</span>
                                 </template>
                                 <el-menu-item index="3-1">Customers</el-menu-item>
                                 <el-menu-item index="3-2">Agents</el-menu-item>
                             </el-submenu>
                             <el-menu-item index="4">
-                                <i class="el-icon-document"></i>
+                                <i class="el-icon-fa-shopping-bag fas"></i>
                                 <span>Subscriptions</span>
                             </el-menu-item>
                             <el-menu-item index="5" click="alert('111');window.open('test-kit.html')">
-                                <i class="el-icon-collection"></i>
+                                <i class="el-icon-fa-paint-roller fas"></i>
                                 <span>UI Kit</span>
                             </el-menu-item>
                             <div style="height:100%"></div>
@@ -57,33 +57,20 @@
                     <el-col>
                         <el-menu default-active="" class="cb-sidebar el-menu-vertical-demo">
                             <el-menu-item index="1">
-                                <i class="el-icon-setting"></i>
+                                <i class="el-icon-fa-cog  fas"></i>
                                 <span>Settings</span>
                             </el-menu-item>
                             <el-menu-item index="2">
-                                <i class="el-icon-help"></i>
+                                <i class="el-icon-fa-life-ring  fas"></i>
                                 <span>Support</span>
                             </el-menu-item>
                         </el-menu>
                     </el-col>
                 </el-row>
-
-                <script>
-                    export default {
-                        methods: {
-                            handleOpen(key, keyPath) {
-                                console.log(key, keyPath);
-                            },
-                            handleClose(key, keyPath) {
-                                console.log(key, keyPath);
-                            }
-                        }
-                    }
-                </script>
             </el-aside>
             <el-container>
                 <el-header height="auto">
-                    <el-row align="medium">
+                    <el-row align="medium" class="cb-topbar">
                         <el-col :span="12">
                             <h1 class="cb-topbar-label">
                                 Marketplace
@@ -92,25 +79,28 @@
                         <el-col :span="12" align="right">
                             <el-badge is-dot class="item">
                                 <a href="https://www.ele.me" target="_blank">
-                                    <i class="el-icon-bell cb-topbar-icon"></i></a>
+                                    <i class="el-icon-fa-bell fas cb-topbar-icon"></i></a>
                             </el-badge>
                             &nbsp;&nbsp;&nbsp;
                             &nbsp;&nbsp;&nbsp;
                             <el-badge :value="12" class="item" type="primary">
                                 <a href="https://www.ele.me" target="_blank">
-                                    <i class="el-icon-shopping-cart-full cb-topbar-icon"></i></a>
+                                    <i class="el-icon-fa-shopping-cart fas cb-topbar-icon"></i></a>
                             </el-badge>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col>
-                            <el-button type="text default">Categories<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text default">Categories<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
-                            <el-button type="text default">Vendors<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text default">Vendors<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
-                            <el-button type="text default">Solutions<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text default">Solutions<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
-                            <el-button type="text default"><i class="el-icon-collection-tag el-icon--left"></i>My
+                            <el-button type="text default"><i class="el-icon-fa-bookmark fas el-icon--left"></i>My
                                 favorites</i>
                             </el-button>
                         </el-col>
@@ -209,7 +199,7 @@
                                             </td>
                                             <td align="right">
                                                 <el-button class="cb-button-contrast" size="medium"><i
-                                                        class="el-icon-collection-tag el-icon--left"></i>Add to
+                                                        class="el-icon-fa-bookmark fas el-icon--left"></i>Add to
                                                     favorites
                                                 </el-button>
                                             </td>
@@ -236,11 +226,11 @@
                                             <h3>4 Service plans</h3>
                                         </td>
                                         <td align="right">
-                                            <el-button type="default" icon="el-icon-download" size="medium">Export<i
-                                                    class="el-icon-arrow-down el-icon--right"></i>
+                                            <el-button type="default" icon="el-icon-fa-file-download fas" size="medium">
+                                                Export<i class="el-icon-fa-angle-down fas el-icon--right"></i>
                                             </el-button>
-                                            <el-button type="default" icon="el-icon-c-scale-to-original" size="medium">
-                                                <i class="el-icon-arrow-down el-icon--right"></i>
+                                            <el-button type="default" icon="el-icon-fa-columns fas" size="medium">
+                                                <i class="el-icon-fa-angle-down fas el-icon--right"></i>
                                             </el-button>
                                         </td>
                                     </tr>
@@ -248,11 +238,28 @@
                                 <br />
                                 <!-- Plans Table -->
                                 <el-table border :data="tableData" stripe style="width: 100%">
-                                    <el-table-column prop="date" label="Date" width="180">
+                                    <el-table-column prop="plan" label="Service Plan">
+                                        <template slot-scope="scope">
+                                            <b>{{ scope.row.plan }}</b>
+                                        </template>
                                     </el-table-column>
-                                    <el-table-column prop="name" label="Name" width="180">
+                                    <el-table-column prop="period" label="Subs. period">
                                     </el-table-column>
-                                    <el-table-column prop="address" label="Address">
+                                    <el-table-column prop="msrp" label="MSRP" align="right">
+                                        <template slot-scope="scope">
+                                            {{ scope.row.msrp }}<br />
+                                            <small>/mo</small>
+                                        </template>
+                                    </el-table-column>
+                                    <el-table-column prop="margin" label="Margin" align="right">
+                                        <template slot-scope=" scope">
+                                            <span class="success"><b>{{ scope.row.margin }}</b></span>
+                                        </template>
+                                    </el-table-column>
+                                    <el-table-column prop="actions" label="" align="right">
+                                        <template slot-scope="scope">
+                                            <el-button type="text primary">Add to cart</el-button>
+                                        </template>
                                     </el-table-column>
                                 </el-table>
                             </div>
@@ -278,7 +285,7 @@
                                     <div>
                                         <el-dropdown>
                                             <el-link type="primary">Manage<i
-                                                    class="el-icon-arrow-down el-icon--right"></i>
+                                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                                             </el-link>
                                             <el-dropdown-menu slot="dropdown">
                                                 <el-dropdown-item>Action 1</el-dropdown-item>
@@ -306,7 +313,7 @@
                             <el-col :span="20">
                                 Regular Buttons:
                                 <el-dropdown>
-                                    <el-button>Default<i class="el-icon-arrow-down el-icon--right"></i>
+                                    <el-button>Default<i class="el-icon-fa-angle-down fas el-icon--right"></i>
                                     </el-button>
                                     <el-dropdown-menu slot="dropdown">
                                         <el-dropdown-item>Action 1</el-dropdown-item>
@@ -316,7 +323,7 @@
                                         <el-dropdown-item>Action 5</el-dropdown-item>
                                     </el-dropdown-menu>
                                 </el-dropdown>
-                                <el-button type="primary" icon="el-icon-share">Primary</el-button>
+                                <el-button type="primary" icon="el-icon-fa-share fas">Primary</el-button>
                                 <el-button type="success">Success</el-button>
                                 <el-button type="info">Info</el-button>
                                 <el-button type="warning">Warning</el-button>
@@ -346,17 +353,23 @@
                         </el-row>
                         <br /><br />
                         <el-row>
-                            <el-button type="text default">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text default">Text Button<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
-                            <el-button type="text primary">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text primary">Text Button<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
-                            <el-button type="text info">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text info">Text Button<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
-                            <el-button type="text danger">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text danger">Text Button<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
-                            <el-button type="text success">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text success">Text Button<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
-                            <el-button type="text warning">Text Button<i class="el-icon-arrow-down el-icon--right"></i>
+                            <el-button type="text warning">Text Button<i
+                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
                             </el-button>
                         </el-row>
                         <br />
@@ -405,6 +418,14 @@
 <script>
     new Vue({
         el: '#app',
+        methods: {
+            handleOpen(key, keyPath) {
+                console.log(key, keyPath);
+            },
+            handleClose(key, keyPath) {
+                console.log(key, keyPath);
+            }
+        },
         data: function () {
             return {
                 input: 'test me',
@@ -412,21 +433,23 @@
                 visible: false,
                 activeName: 'first',
                 tableData: [{
-                    date: '2016-05-03',
-                    name: 'Tom',
-                    address: 'No. 189, Grove St, Los Angeles'
+                    plan: 'Office 365 Business Essentials',
+                    period: "1 yr",
+                    margin: '18.50%',
+                    msrp: '$50.40',
+                    actions: ""
                 }, {
-                    date: '2016-05-02',
-                    name: 'Tom',
-                    address: 'No. 189, Grove St, Los Angeles'
+                    plan: 'Office 365 Business Premium',
+                    period: "1 yr",
+                    margin: '18.18%',
+                    msrp: '$126.00',
+                    actions: ""
                 }, {
-                    date: '2016-05-04',
-                    name: 'Tom',
-                    address: 'No. 189, Grove St, Los Angeles'
-                }, {
-                    date: '2016-05-01',
-                    name: 'Tom',
-                    address: 'No. 189, Grove St, Los Angeles'
+                    plan: 'Office 365 Business Super Pro',
+                    period: "1 yr",
+                    margin: '11.11%',
+                    msrp: '$92.30',
+                    actions: ""
                 }]
             }
         }
