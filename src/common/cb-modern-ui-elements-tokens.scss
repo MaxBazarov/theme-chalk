@@ -58,6 +58,48 @@ div.cb-topbar{
 }
 
 
+///////////////// TOP MENU //////////////////////////////////
+.cb-topmenu{
+    background-color:                           transparent;
+    height:                                     $button-height-Large;    
+    border-bottom:                              0px none !important;
+}
+
+.cb-topmenu .el-submenu__title,.el-menu-item{
+    padding-left:                               0px;    
+    border-bottom:                              0px none !important;
+    font-size:                                  $button-font-size-Large !important;
+    color:                                      $color-text-default !important;
+    //vertical-align:                           middle;
+    letter-spacing:                             $font-medium-spacing !important;
+    font-weight:                                $font-weight-semibold !important;
+    height:                                     $button-height-Large !important;
+}
+
+.cb-topmenu-submenu-item,.cb-topmenu-submenu-item.div{
+    font-size:                                  $button-font-size-Medium !important;
+    color:                                      $color-text-default !important;
+    //vertical-align:                           middle;
+    letter-spacing:                             $font-medium-spacing !important;
+    font-weight:                                $font-weight-normal !important;
+    height:                                     $button-height-Medium !important;
+}
+.cb-topmenu-submenu-item .el-submenu__title{
+    font-size:                                  $button-font-size-Medium !important;
+    color:                                      $color-text-default !important;
+    //vertical-align:                           middle;
+    letter-spacing:                             $font-medium-spacing !important;
+    font-weight:                                $font-weight-normal !important;
+    height:                                     $button-height-Medium !important;
+}
+
+// icon
+.cb-topmenu .el-submenu__title,.el-menu-item i{
+    font-size:                                  $button-font-size-Large !important;
+    color:                                      $color-text-default !important;
+}
+
+
 /////////////////////// TABLE ///////////////////////////
 .el-table{
     border-radius:                              $radius;

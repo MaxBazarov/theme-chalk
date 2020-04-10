@@ -90,20 +90,33 @@
                         </el-col>
                     </el-row>
                     <el-row>
-                        <el-col>
-                            <el-button type="text default">Categories<i
-                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
-                            </el-button>
-                            <el-button type="text default">Vendors<i
-                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
-                            </el-button>
-                            <el-button type="text default">Solutions<i
-                                    class="el-icon-fa-angle-down fas el-icon--right"></i>
-                            </el-button>
-                            <el-button type="text default"><i class="el-icon-fa-bookmark fas el-icon--left"></i>My
-                                favorites</i>
-                            </el-button>
-                        </el-col>
+                        <table>
+                            <tr>
+                                <td>
+                                    <el-menu :default-active="activeIndex" class="cb-topmenu" mode="horizontal"
+                                        @select="handTopMenuleSelect">
+                                        <el-submenu index="1">
+                                            <template slot="title">Categories</template>
+                                            <el-submenu index="1-1" class="cb-topmenu-submenu-item">
+                                                <template slot="title">Backup and Disaster Recovery</template>
+                                                <el-menu-item index="1-1-1" class="cb-topmenu-submenu-item">item one
+                                                </el-menu-item>
+                                                <el-menu-item index="1-1-2" class="cb-topmenu-submenu-item">item two
+                                                </el-menu-item>
+                                                <el-menu-item index="1-1-3" class="cb-topmenu-submenu-item">item three
+                                                </el-menu-item>
+                                            </el-submenu>
+                                            <el-menu-item index="2-1" class="cb-topmenu-submenu-item">Business
+                                                Applications</el-menu-item>
+                                            <el-menu-item index="2-1" class="cb-topmenu-submenu-item">Cloud Enablement
+                                                Services</el-menu-item>
+                                        </el-submenu>
+                                        <el-menu-item index="2"><i class="el-icon-fa-bookmark fas el-icon--left"></i>My
+                                            favorites</i></el-menu-item>
+                                    </el-menu>
+                                </td>
+                            </tr>
+                        </table>
                     </el-row>
                 </el-header>
                 <el-main>
@@ -423,6 +436,9 @@
                 console.log(key, keyPath);
             },
             handleClose(key, keyPath) {
+                console.log(key, keyPath);
+            },
+            handTopMenuleSelect(key, keyPath) {
                 console.log(key, keyPath);
             }
         },
