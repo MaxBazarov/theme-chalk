@@ -12,6 +12,7 @@ input, textarea, keygen, select, button {
 // Custom font size foe H1
 h1 {
     font-size:                  $font-xx-large;
+    font-weight:                $font-weight-medium;
 }
 
 // Setup custom weight for h3
@@ -52,12 +53,6 @@ div.cb-topbar{
     font-size:                  $top-bar-item-icon-font;
     color:                      $color-text;
 }
-.cb-sidebar-back {
-    background-color:           $side-bar-background;
-    //width:                      $side-bar-width;    
-}
-
-
 ///////////////// TOP MENU //////////////////////////////////
 .cb-topmenu{
     background-color:                           transparent;
@@ -65,7 +60,8 @@ div.cb-topbar{
     border-bottom:                              0px none !important;
 }
 
-.cb-topmenu .el-submenu__title,.el-menu-item{
+.cb-topmenu .el-submenu__title,
+.cb-topmenu .el-menu-item{
     padding-left:                               0px;    
     border-bottom:                              0px none !important;
     font-size:                                  $button-font-size-Large !important;
@@ -76,7 +72,8 @@ div.cb-topbar{
     height:                                     $button-height-Large !important;
 }
 
-.cb-topmenu-submenu-item,.cb-topmenu-submenu-item.div{
+.cb-topmenu-submenu-item,
+.cb-topmenu-submenu-item.div{
     font-size:                                  $button-font-size-Medium !important;
     color:                                      $color-text-default !important;
     //vertical-align:                           middle;
@@ -94,7 +91,8 @@ div.cb-topbar{
 }
 
 // icon
-.cb-topmenu .el-submenu__title,.el-menu-item i{
+.cb-topmenu .el-submenu__title,
+.cb-topmenu .el-menu-item i{
     font-size:                                  $button-font-size-Large !important;
     color:                                      $color-text-default !important;
 }
@@ -176,62 +174,77 @@ div#app > section.el-container{
 
 .cb-sidebar {
     border-right:              none;
-}
-.cb-sidebar .el-menu-item *{ 
-    font-weight:                 $side-bar-item-weight;
-    line-height:                 $side-bar-item-height;
-}
-.cb-sidebar .el-submenu__title *{ 
-    font-weight:                 $side-bar-item-weight;
-    line-height:                 $side-bar-item-height;
-    height:                      $side-bar-item-height;
-}
-.cb-sidebar .fas{ 
-    font-size:                   $side-bar-item-icon-font;
-    color:                       $side-bar-item-text;
-}
-.cb-sidebar .el-menu-item{ 
-    line-height:                 $side-bar-item-height;
-    height:                      $side-bar-item-height;
+    padding:                   12px;
 }
 
-.cb-sidebar .el-menu-item span{
-    margin-left:                 10px;
-} 
-.cb-sidebar .el-submenu span{
-    margin-left:                 10px;
+.cb-sidebar-back {
+    background-color:           $side-bar-background;
+    //width:                      $side-bar-width;    
 }
 
-.cb-sidebar .el-menu-item:hover, .el-submenu__title:hover, i:hover {
-    background-color:             $side-bar-item-background-hovered;
-    color:                        $side-bar-item-text-hovered;
-}
-.cb-sidebar .el-menu-item:focus, .el-submenu__title:focus, i:focus{
-    background-color:             $side-bar-item-background-hovered;
-    color:                        $side-bar-item-text-hovered;
-}
+.cb-sidebar{
 
-.cb-sidebar .el-submenu__icon-arrow {
-    display:                    none;
-}
+    .el-menu-item:first-of-type{
+        margin-bottom:                8px;
+    }
+    .el-menu-item{ 
+        height:                      $side-bar-item-height;
+    }
 
-.cb-sidebar .el-menu--inline{
-    padding-left:                 $side-bar-sub-item-padding-left;
-}
+    .el-menu-item span,
+    .el-submenu__title span
+    { 
+        font-weight:                 $side-bar-item-weight;
+        line-height:                 $side-bar-item-height;
+        height:                      $side-bar-item-height;
+    }
+    .fas{ 
+        font-size:                   $side-bar-item-icon-font;
+        color:                       $side-bar-item-text;
+    }
+    el-menu-item{ 
+        line-height:                 $side-bar-item-height;
+        height:                      $side-bar-item-height;
+    }
+    .el-menu-item span,
+    .el-submenu span{
+        margin-left:                 10px;
+    } 
+    .el-menu-item:hover,
+    .el-submenu__title:hover{
+        background-color:             $side-bar-item-background-hovered;
+        color:                        $side-bar-item-text-hovered;
+    }
+    .el-menu-item:focus, 
+    .el-menu-item:focus .fas, 
+    .el-submenu__title:focus
+    {
+        background-color:             $side-bar-item-background-hovered;
+        color:                        $side-bar-item-text-hovered;
+    }
 
-.cb-sidebar .el-menu--inline  li{
-    color:                        $side-bar-sub-item-text;
-    font-size:                    $side-bar-sub-item-font;
-    font-weight:                  $side-bar-sub-item-weight;
-    line-height:                  $side-bar-sub-item-height;
-    padding-left:                 62px;
-}
+    .el-submenu__icon-arrow {
+        display:                    none;
+    }
 
+    .el-menu--inline{
+        padding-left:                 $side-bar-sub-item-padding-left;
+    }
+
+    .el-menu--inline  li{
+        color:                        $side-bar-sub-item-text;
+        font-size:                    $side-bar-sub-item-font;
+        font-weight:                  $side-bar-sub-item-weight;
+        line-height:                  $side-bar-sub-item-height;
+        padding-left:                 62px;
+    }
+}
 .cb-sidebar-bottom{
     position:                    absolute;
     bottom:                      $side-bar-margin-bottom;
     left:                        0; 
 }
+
 
 ////////////////////////////// TAGS ////////////////////////////////////
 .el-tag--mini{
@@ -302,78 +315,83 @@ div#app > section.el-container{
     background:                                 $mp-plan-background-hover;
 }
 
-.cb-marketplace-plan img.plan-icon{
-    width:                                      $mp-service-icon-medium-size;
-    height:                                     $mp-service-icon-medium-size;
-    border-radius:                              $mp-service-icon-medium-border-radius;
-}
+.cb-marketplace-plan{
+    img.plan-icon{
+        width:                                      $mp-service-icon-medium-size;
+        height:                                     $mp-service-icon-medium-size;
+        border-radius:                              $mp-service-icon-medium-border-radius;
+    }
 
-.cb-marketplace-plan td:nth-child(1){
-    width:                                      $mp-service-icon-medium-size;
-}
-.cb-marketplace-plan .plan-content{
-    padding-left:                               $mp-plan-content-margin-left;
-    padding-top:                                $mp-plan-content-margin-top;
-    vertical-align:                             top;
- 
-}
-.cb-marketplace-plan .plan-label{
-    @extend h3;
-    vertical-align:                             top;
-    line-height:                                $mp-plan-label-line-height;
-}
-.cb-marketplace-plan .plan-vendor{
-    color:                                      $mp-plan-vendor-color;
-    font-size:                                  $mp-plan-vendor-font-size;
-    font-family:                                $font-face-regular; 
-    font-weight:                                $mp-plan-vendor-font-weight;
-    display:                                    inline;
-    vertical-align:                             top;
-    line-height:                                $mp-plan-vendor-line-height;
-}
-.cb-marketplace-plan .plan-price{
-    color:                                      $mp-plan-price-color;
-    font-size:                                  $mp-plan-price-font-size;
-    font-family:                                $font-face-regular; 
-    font-weight:                                $mp-plan-price-font-weight;
-    display:                                    inline;
-    vertical-align:                             top;
-    line-height:                                $mp-plan-price-line-height;
-}
-.cb-marketplace-plan .plan-content{
-    padding-left:                               $mp-plan-content-margin-left;
-    padding-top:                                $mp-plan-content-margin-top;
-    vertical-align:                             top;
- 
+    td:nth-child(1){
+        width:                                      $mp-service-icon-medium-size;
+    }
+    .plan-content{
+        padding-left:                               $mp-plan-content-margin-left;
+        padding-top:                                $mp-plan-content-margin-top;
+        vertical-align:                             top;
+    
+    }
+    .plan-label{
+        @extend h3;
+        vertical-align:                             top;
+        line-height:                                $mp-plan-label-line-height;
+    }
+    .plan-vendor{
+        color:                                      $mp-plan-vendor-color;
+        font-size:                                  $mp-plan-vendor-font-size;
+        font-family:                                $font-face-regular; 
+        font-weight:                                $mp-plan-vendor-font-weight;
+        display:                                    inline;
+        vertical-align:                             top;
+        line-height:                                $mp-plan-vendor-line-height;
+    }
+    .plan-price{
+        color:                                      $mp-plan-price-color;
+        font-size:                                  $mp-plan-price-font-size;
+        font-family:                                $font-face-regular; 
+        font-weight:                                $mp-plan-price-font-weight;
+        display:                                    inline;
+        vertical-align:                             top;
+        line-height:                                $mp-plan-price-line-height;
+    }
+    .plan-content{
+        padding-left:                               $mp-plan-content-margin-left;
+        padding-top:                                $mp-plan-content-margin-top;
+        vertical-align:                             top;
+    
+    }
 }
 
 // Product / Header
-.cb-marketplace-product .header{
-    background:                                 $mp-product-header-background-color;
-    padding:                                    $mp-product-header-space;
-    border-radius:                              $mp-product-header-border-radius;
-}
-.cb-marketplace-product .header .content{    
-    padding-left:                                $mp-product-header-content-margin-left;
-    vertical-align:                             top;
-}
-
-.cb-marketplace-product img.icon{
-    width:                                      $mp-service-icon-large-size;
-    height:                                     $mp-service-icon-large-size;
-    border-radius:                              $mp-service-icon-large-border-radius;
-}
-.cb-marketplace-product .header .product{
-    @extend h1;
-    color:                                      $color-text-default-contrast;
-    vertical-align:                             top;
-    line-height:                                $font-x-large * $line-height-medium;
-}
-.cb-marketplace-product .header .vendor{
-    color:                                      $color-text-default-contrast;
-    opacity:                                    $mp-product-header-vendor-text-opacity;
-    vertical-align:                             top;
-    line-height:                                $font-medium * $line-height-medium;
+.cb-marketplace-product{
+    .header{
+        background:                                 $mp-product-header-background-color;
+        padding:                                    $mp-product-header-space;
+        border-radius:                              $mp-product-header-border-radius;
+    }
+    .header{
+        .content{    
+            padding-left:                                $mp-product-header-content-margin-left;
+            vertical-align:                             top;
+        }
+        .product{
+            @extend h1;
+            color:                                      $color-text-default-contrast;
+            vertical-align:                             top;
+            line-height:                                $font-x-large * $line-height-medium;
+        }
+        .vendor{
+            color:                                      $color-text-default-contrast;
+            opacity:                                    $mp-product-header-vendor-text-opacity;
+            vertical-align:                             top;
+            line-height:                                $font-medium * $line-height-medium;
+        }
+    }
+    img.icon{
+        width:                                      $mp-service-icon-large-size;
+        height:                                     $mp-service-icon-large-size;
+        border-radius:                              $mp-service-icon-large-border-radius;
+    }    
 }
 //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// ELEMENT TOKENS ////////////////////////////////////
