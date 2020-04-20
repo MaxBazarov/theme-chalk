@@ -71,12 +71,17 @@
             <el-container>
                 <el-header height="auto">
                     <el-row align="medium" class="cb-topbar">
-                        <el-col :span="12">
+                        <el-col :span="8">
                             <h1 class="cb-topbar-label">
                                 Marketplace
                             </h1>
                         </el-col>
-                        <el-col :span="12" align="right">
+                        <el-col :span="8" align="center">
+                            </el-input>
+                            <el-input placeholder="Search" width="376px" size="medium"
+                                prefix-icon="el-icon-fa-search fas">
+                        </el-col>
+                        <el-col :span="8" align="right">
                             <el-badge is-dot class="item">
                                 <a href="https://www.ele.me" target="_blank">
                                     <i class="el-icon-fa-bell fas cb-topbar-icon"></i></a>
@@ -95,9 +100,10 @@
                                 <td>
                                     <el-menu :default-active="activeIndex" class="cb-topmenu" mode="horizontal"
                                         @select="handTopMenuleSelect">
-                                        <el-submenu index="1">
+                                        <el-submenu index="1" popper-class="cb-topmenu-submenu">
                                             <template slot="title">Categories</template>
-                                            <el-submenu index="1-1" class="cb-topmenu-submenu-item">
+                                            <el-submenu index="1-1" class="cb-topmenu-submenu-item"
+                                                popper-class="cb-topmenu-submenu">
                                                 <template slot="title">Backup and Disaster Recovery</template>
                                                 <el-menu-item index="1-1-1" class="cb-topmenu-submenu-item">item one
                                                 </el-menu-item>
@@ -106,9 +112,9 @@
                                                 <el-menu-item index="1-1-3" class="cb-topmenu-submenu-item">item three
                                                 </el-menu-item>
                                             </el-submenu>
-                                            <el-menu-item index="2-1" class="cb-topmenu-submenu-item">Business
+                                            <el-menu-item index="1-2" class="cb-topmenu-submenu-item">Business
                                                 Applications</el-menu-item>
-                                            <el-menu-item index="2-1" class="cb-topmenu-submenu-item">Cloud Enablement
+                                            <el-menu-item index="1-3" class="cb-topmenu-submenu-item">Cloud Enablement
                                                 Services</el-menu-item>
                                         </el-submenu>
                                         <el-menu-item index="2"><i class="el-icon-fa-bookmark fas el-icon--left"></i>My
@@ -142,7 +148,8 @@
                                 <table class="cb-marketplace-plan" width="100%">
                                     <tr>
                                         <td rowspan="">
-                                            <img class="plan-icon" src="images/services/o365.png"></img>
+                                            <img class="cb-marketplace-plan-icon-medium"
+                                                src="images/services/o365.png"></img>
                                         </td>
                                         <td class="plan-content">
                                             <div class="plan-label">Microsoft Office 365</div>
@@ -163,7 +170,8 @@
                             <table class="cb-marketplace-plan">
                                 <tr>
                                     <td rowspan="">
-                                        <img class="plan-icon" src="images/services/acronis.png"></img>
+                                        <img class="cb-marketplace-plan-icon-medium"
+                                            src="images/services/acronis.png"></img>
                                     </td>
                                     <td class="plan-content">
                                         <div class="plan-label">Acronis O365 Backup</div>
@@ -180,7 +188,8 @@
                             <table class="cb-marketplace-plan">
                                 <tr>
                                     <td rowspan="">
-                                        <img class="plan-icon" src="images/services/dropbox.png"></img>
+                                        <img class="cb-marketplace-plan-icon-medium"
+                                            src="images/services/dropbox.png"></img>
                                     </td>
                                     <td class="plan-content">
                                         <div class="plan-label">Dropbox Business: Advanced</div>
@@ -204,7 +213,8 @@
                                     <table width="100%">
                                         <tr>
                                             <td>
-                                                <img class=" icon" src="images/services/o365.png"></img>
+                                                <img class="cb-marketplace-plan-icon-large"
+                                                    src="images/services/o365.png"></img>
                                             </td>
                                             <td class="content" width="100%">
                                                 <div class="product">Microsoft Office 365</div>
@@ -250,7 +260,8 @@
                                 </table>
                                 <br />
                                 <!-- Plans Table -->
-                                <el-table border :data="tableData" stripe style="width: 100%">
+                                <el-table border :data="tableData" stripe style="width: 100%"
+                                    @row-click="planDrawer = true" row-class-name="cb-clickable">
                                     <el-table-column prop="plan" label="Service Plan">
                                         <template slot-scope="scope">
                                             <b>{{ scope.row.plan }}</b>
@@ -278,6 +289,104 @@
                             </div>
                         </el-col>
                     </el-row>
+                    <!----------------------------------- PLAN DRAWER ------------------->
+                    <el-drawer :visible.sync="planDrawer" :direction="planDrawerDirection" :with-header="false"
+                        custom-class="cb-marketplace-drawer-plan">
+                        <!-- Header -->
+                        <div class="header">
+                            <table width="100%">
+                                <tr>
+                                    <td>
+                                        <img class="cb-marketplace-plan-icon-large"
+                                            src="images/services/o365.png"></img>
+                                    </td>
+                                    <td class="content" width="100%">
+                                        <div class="plan">Microsoft Office 365</div>
+                                        <div class="vendor">Microsoft</div>
+                                    </td>
+                                    <td align="righ">
+                                        <el-button type="text info" size="medium" icon="el-icon-fa-times fas"
+                                            @click="planDrawer = false">
+                                        </el-button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- Prices-->
+                        <br />
+                        <table class="prices" width="100%">
+                            <tr>
+                                <td>
+                                    <span class="info">Period</span>
+                                </td>
+                                <td>
+                                    <span class="info">Cost</span>
+                                </td>
+                                <td>
+                                    <span class="info">Margin</span>
+                                </td>
+                                <td>
+                                    <span class="info">List price</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h2>
+                                        1 Year
+                                    </h2>
+                                </td>
+                                <td>
+                                    <h2>$4.00</h2>
+                                </td>
+                                <td>
+                                    <h2><span class="success"><b>0%</b></span></h2>
+                                </td>
+                                <td>
+                                    <h2>$4.00</h2>
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <br>
+                        <!-- Buttons -->
+                        <el-row>
+                            <el-col :span="24">
+                                <el-button size="medium" type="primary" icon="el-icon-fa-shopping-cart fas">Buy now
+                                </el-button>
+                                <el-button size="medium" type="info" icon="el-icon-fa-cart-plus fas">Add to cart
+                                </el-button>
+                                <el-button type="default" icon="el-icon-fa-file-download fas" size="medium">
+                                    Export<i class="el-icon-fa-angle-down fas el-icon--right"></i>
+                                </el-button>
+                                <el-button type="default" icon="el-icon-fa-columns fas" size="medium">
+                                    <i class="el-icon-fa-angle-down fas el-icon--right"></i>
+                                </el-button>
+                            </el-col>
+                        </el-row>
+                        <br><br>
+                        <el-table border :data="planDrawerData" stripe style="width: 100%">
+                            <el-table-column prop="plan" label="Service plan">
+                                <template slot-scope="scope">
+                                    <b>{{ scope.row.plan }}</b>
+                                </template>
+                            </el-table-column>
+                            <el-table-column prop="cost" label="Cost" align="right">
+                                <template slot-scope="scope">
+                                    {{ scope.row.cost }}
+                                </template>
+                            </el-table-column>
+                            <el-table-column prop="margin" label="Margin" align="right">
+                                <template slot-scope=" scope">
+                                    <span class="success"><b>{{ scope.row.margin }}</b></span>
+                                </template>
+                            </el-table-column>
+                            <el-table-column prop="price" label="List price">
+                                <template slot-scope="scope">
+                                    <b>{{ scope.row.price }}</b>
+                                </template>
+                            </el-table-column>
+                        </el-table>
+                    </el-drawer>
                     <!-- /Product -->
                     <!---------------------------------------------------------------/CONTENT---->
                     <el-divider></el-divider>
@@ -417,6 +526,16 @@
                                 <el-tag size="mini" effect="light" type="success">Success</el-tag>
                             </el-cell>
                         </el-row>
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Radio Buttons
+                                <el-radio v-model="radio" label="1">Selected</el-radio>
+                                <el-radio v-model="radio" label="2" size="medium">Unselected</el-radio>
+                                <el-radio disabled v-model="radio" size="small" label="disabled">Disabled</el-radio>
+                            </el-cell>
+                        </el-row>
+                        <br />
                 </el-main>
                 <!--<el-footer>Footer</el-footer>-->
             </el-container>
@@ -444,10 +563,19 @@
         },
         data: function () {
             return {
+                planDrawer: false,
+                planDrawerDirection: "rtl",
                 input: 'test me',
                 isCollapse: true,
                 visible: false,
                 activeName: 'first',
+                radio: '1',
+                planDrawerData: [{
+                    plan: 'Office 365 Business Essentials',
+                    cost: "$4.00",
+                    margin: '0%',
+                    price: '$4.0',
+                }],
                 tableData: [{
                     plan: 'Office 365 Business Essentials',
                     period: "1 yr",

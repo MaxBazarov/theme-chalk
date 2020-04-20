@@ -16,9 +16,16 @@ h1 {
 }
 
 // Setup custom weight for h3
-h3 {
+h2 {
+    font-size:                  $font-x-large;
     font-weight:                $font-weight-medium;
-  }
+}
+
+// Setup custom weight for h3
+h3 {
+    font-size:                  $font-large;
+    font-weight:                $font-weight-medium;
+}
 
 
 small{
@@ -31,7 +38,13 @@ span.success{
 span.danger{
     color:                                          $color-text-danger;
 }
+span.info{
+    color:                                          $color-text-secondary;
+}
 
+.cb-clickable{
+    cursor:                                     pointer;
+}
 
 .cb-page-description{
     @extend h3;
@@ -60,16 +73,21 @@ div.cb-topbar{
     border-bottom:                              0px none !important;
 }
 
-.cb-topmenu .el-submenu__title,
-.cb-topmenu .el-menu-item{
-    padding-left:                               0px;    
-    border-bottom:                              0px none !important;
-    font-size:                                  $button-font-size-Large !important;
-    color:                                      $color-text-default !important;
-    //vertical-align:                           middle;
-    letter-spacing:                             $font-medium-spacing !important;
-    font-weight:                                $font-weight-semibold !important;
-    height:                                     $button-height-Large !important;
+.cb-topmenu{
+    .el-submenu__title,.el-menu-item{
+        padding-left:                               0px;    
+        border-bottom:                              0px none !important;
+        font-size:                                  $button-font-size-Large !important;
+        color:                                      $color-text-default !important;
+        //vertical-align:                           middle;
+        letter-spacing:                             $font-medium-spacing !important;
+        font-weight:                                $font-weight-semibold !important;
+        height:                                     $button-height-Large !important;
+    }
+}
+
+.cb-topmenu-submenu{
+    width:                                       $topmenu-submenu-width;
 }
 
 .cb-topmenu-submenu-item,
@@ -96,7 +114,6 @@ div.cb-topbar{
     font-size:                                  $button-font-size-Large !important;
     color:                                      $color-text-default !important;
 }
-
 
 /////////////////////// TABLE ///////////////////////////
 .el-table{
@@ -307,6 +324,13 @@ div#app > section.el-container{
     color:                      $color-text-warning;
 }
 
+////////////////////////////// RIGHT SIDEBAR ("STAVNYA") ////////////////////////////////////
+.el-drawer{
+    padding:                                      $space-xx-large;
+    width:                                        $drawer-width !important;
+    background-color:           $side-bar-background;
+}
+
 ////////////////////////////// CB MARKETPLACE STYLES ////////////////////////////////////
 
 // Browser / Plan
@@ -315,12 +339,19 @@ div#app > section.el-container{
     background:                                 $mp-plan-background-hover;
 }
 
-.cb-marketplace-plan{
-    img.plan-icon{
-        width:                                      $mp-service-icon-medium-size;
-        height:                                     $mp-service-icon-medium-size;
-        border-radius:                              $mp-service-icon-medium-border-radius;
-    }
+.cb-marketplace-plan-icon-medium{
+    width:                                      $mp-service-icon-medium-size;
+    height:                                     $mp-service-icon-medium-size;
+    border-radius:                              $mp-service-icon-medium-border-radius;
+}
+
+.cb-marketplace-plan-icon-large{
+    width:                                      $mp-service-icon-large-size;
+    height:                                     $mp-service-icon-large-size;
+    border-radius:                              $mp-service-icon-large-border-radius;
+}  
+
+.cb-marketplace-plan{   
 
     td:nth-child(1){
         width:                                      $mp-service-icon-medium-size;
@@ -386,12 +417,37 @@ div#app > section.el-container{
             vertical-align:                             top;
             line-height:                                $font-medium * $line-height-medium;
         }
+    }   
+}
+// Drawer / Plan / Header
+.cb-marketplace-drawer-plan{
+    .header{
+        //background:                                 $mp-product-header-background-color;
+        //padding:                                    $mp-product-header-space;
+        //border-radius:                              $mp-product-header-border-radius;
     }
-    img.icon{
-        width:                                      $mp-service-icon-large-size;
-        height:                                     $mp-service-icon-large-size;
-        border-radius:                              $mp-service-icon-large-border-radius;
-    }    
+    .header{
+        .content{    
+            padding-left:                                $mp-product-header-content-margin-left;
+            vertical-align:                             top;
+        }
+        .plan{
+            @extend h1;
+            color:                                      $color-text-default;
+            vertical-align:                             top;
+            line-height:                                $font-x-large * $line-height-medium;
+        }
+        .vendor{
+            color:                                      $color-text-default;
+            //opacity:                                    $mp-product-header-vendor-text-opacity;
+            vertical-align:                             top;
+            line-height:                                $font-medium * $line-height-medium;
+        }
+    }   
+    .prices{
+        border-spacing:                                 4px;
+        border-collapse:                                initial;
+    }
 }
 //////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// ELEMENT TOKENS ////////////////////////////////////
@@ -507,7 +563,7 @@ TODO:
 */
 $--input-font-size:                 $text-input-font-size-Large;
 $--input-font-color:                $color-text;
-$--input-height:                    $widget-large;
+$--input-height:                    $widget-Large;
 $--input-border:                    $--border-base;
 $--input-border-color:              $color-border;
 $--input-border-radius:             $radius-medium;
@@ -528,11 +584,11 @@ $--input-disabled-color:            $color-text-disabled;
 $--input-disabled-placeholder-color: $color-text-disabled-contrast;
 
 $--input-medium-font-size:          $text-input-font-size-Medium;
-$--input-medium-height:             $widget-medium;
+$--input-medium-height:             $widget-Medium;
 $--input-small-font-size:           $text-input-font-size-Small;
-$--input-small-height:              $widget-small;
+$--input-small-height:              $widget-Small;
 $--input-mini-font-size:            $text-input-font-size-Mini;
-$--input-mini-height:               $widget-mini;
+$--input-mini-height:               $widget-Mini;
 
 
 // Box-shadow
