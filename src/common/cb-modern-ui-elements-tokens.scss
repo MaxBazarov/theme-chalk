@@ -468,7 +468,7 @@ $--color-black:                 $color-black;
 $--color-success:               $color-success;
 $--color-warning:               $color-warning;
 $--color-danger:                $color-danger;
-$--color-info:                  $color-secondary;
+$--color-info:                  $color-text-secondary;
 $--color-text-primary:          $color-text;
 $--color-text-regular:          $color-text;
 $--color-text-secondary:        $color-text-secondary;
@@ -678,7 +678,7 @@ $--menu-item-hover-fill:            $side-bar-item-text-hovered;
 
 /* Tag
 -------------------------- */
-$--tag-info-color:                  $color-secondary;
+$--tag-info-color:                  $color-text-secondary;
 $--tag-primary-color:               $color-primary;
 $--tag-success-color:               $color-success;
 $--tag-warning-color:               $color-warning;
