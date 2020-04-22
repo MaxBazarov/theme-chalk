@@ -86,8 +86,10 @@ div.cb-topbar{
     }
 }
 
-.cb-topmenu-submenu{
-    width:                                       $topmenu-submenu-width;
+.cb-topmenu-submenu .el-menu--popup{
+    width:                                          $topmenu-submenu-width;
+    box-shadow:                                     $topmenu-back-shadow !important;
+    background:                                     $color-background-container;
 }
 
 .cb-topmenu-submenu-item,
@@ -106,6 +108,7 @@ div.cb-topbar{
     letter-spacing:                             $font-medium-spacing !important;
     font-weight:                                $font-weight-normal !important;
     height:                                     $button-height-Medium !important;
+    background:                                 none;
 }
 
 // icon
@@ -328,9 +331,12 @@ div#app > section.el-container{
 .el-drawer{
     padding:                                      $space-xx-large;
     width:                                        $drawer-width !important;
-    background-color:           $side-bar-background;
+    background-color:                             $drawer-back-background-color;
+    box-shadow:                                   $drawer-back-shadow;
+    border-color:                                 $drawer-back-border-color;
+    border-width:                                 $drawer-back-border-width;
+    border-radius:                                $drawer-back-border-radius;
 }
-
 ////////////////////////////// CB MARKETPLACE STYLES ////////////////////////////////////
 
 // Browser / Plan
@@ -680,3 +686,128 @@ $--tag-danger-color:                $color-danger;
 $--tag-font-size:                   12px !default;
 $--tag-border-radius:               $tag-border-radius;
 $--tag-padding:                     0 $tag-text-margin;
+
+
+
+/* Radio
+-------------------------- */
+$--radio-font-size:                                         $font-medium;
+$--radio-font-weight:                                       $font-weight-normal;
+
+// height of regular Large oval
+$--radio-input-height:                                      $radio-symbol-size;
+// width of regular Large oval
+$--radio-input-width:                                       $radio-symbol-size;
+// border of regular oval
+$--radio-input-border:                                      $radio-regular-symbol-border-width solid $radio-regular-symbol-color;
+//$--radio-input-border-radius:         $radio-outlined-border-radius;
+//  background color of regular oval
+$--radio-input-background-color:                              $color-white;
+// not used
+//$--radio-input-border-color:                                 green;
+//$--radio-icon-color:                                         $color-white;
+//$--radio-font-color:                                         $color-text;
+
+//$--radio-disabled-input-border-color: $--disabled-border-base !default;
+//$--radio-disabled-input-fill: $--disabled-fill-base !default;
+//$--radio-disabled-icon-color: $--disabled-fill-base !default;
+
+//$--radio-disabled-checked-input-border-color: $--disabled-border-base !default;
+//$--radio-disabled-checked-input-fill: $--disabled-fill-base !default;
+//$--radio-disabled-checked-icon-color: $--color-text-placeholder !default;
+
+$--radio-checked-font-color:                                $color-text;
+//$--radio-checked-input-border-color:                        $radio-selected-symbol-color;
+//$--radio-checked-input-background-color:                    $color-white;
+//$--radio-checked-icon-color:                                $radio-selected-symbol-color;
+
+//$--radio-input-border-color-hover: $--color-primary !default;
+
+$--radio-bordered-height:                                      $radio-outlined-height-Large;
+$--radio-bordered-padding:                                     ($radio-outlined-height-Large - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--radio-bordered-medium-padding:                              ($radio-outlined-height-Medium - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--radio-bordered-small-padding:                               ($radio-outlined-height-Small - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+//$--radio-bordered-mini-padding: 6px 15px 0 10px !default;
+//$--radio-bordered-medium-input-height: 14px !default;
+//$--radio-bordered-medium-input-width: 14px !default;
+$--radio-bordered-medium-height:                              $radio-outlined-height-Medium;
+//$--radio-bordered-small-input-height: 12px !default;
+//$--radio-bordered-small-input-width: 12px !default;
+$--radio-bordered-small-height:                               $radio-outlined-height-Small;
+//$--radio-bordered-mini-input-height: 12px !default;
+//$--radio-bordered-mini-input-width: 12px !default;
+//$--radio-bordered-mini-height: 28px !default;
+
+// unknown usage
+//$--radio-button-font-size:                                  $--font-size-base !default;
+// unknown usage
+//$--radio-button-checked-background-color:                     $radio-outlined-selected-border-color;
+// unknown usage
+//$--radio-button-checked-font-color:                             $color-text;
+//$--radio-button-checked-border-color: $--color-primary !default;
+//$--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
+        
+.el-radio__inner::after{
+    $size:                                        $radio-symbol-size - $radio-selected-symbol-border-width*2;      
+    height:                                       $size;
+    width:                                        $size;
+}
+
+.el-radio.is-bordered.is-checked{
+    background-color:                             $radio-outlined-selected-background;
+}
+
+/* Checkbox
+-------------------------- */
+$--checkbox-font-size:                              $font-medium;
+$--checkbox-font-weight:                            $font-weight-normal;
+
+//$--checkbox-font-color: $--color-text-regular !default;
+$--checkbox-input-height:                           $radio-symbol-size;
+$--checkbox-input-width:                            $radio-symbol-size;
+$--checkbox-border-radius:                          $checkbox-border-radius;
+//$--checkbox-background-color: $--color-white !default;
+$--checkbox-input-border:                           $radio-regular-symbol-border-width solid $radio-regular-symbol-color;
+
+//$--checkbox-disabled-border-color: $--border-color-base !default;
+//$--checkbox-disabled-input-fill: #edf2fc !default;
+//$--checkbox-disabled-icon-color: $--color-text-placeholder !default;
+
+//$--checkbox-disabled-checked-input-fill: $--border-color-extra-light !default;
+//$--checkbox-disabled-checked-input-border-color: $--border-color-base !default;
+//$--checkbox-disabled-checked-icon-color: $--color-text-placeholder !default;
+
+$--checkbox-checked-font-color:                     $color-text;
+//$--checkbox-checked-input-border-color: $--color-primary !default;
+//$--checkbox-checked-background-color: $--color-primary !default;
+//$--checkbox-checked-icon-color: $--fill-base !default;
+
+//$--checkbox-input-border-color-hover: $--color-primary !default;
+$--checkbox-bordered-height:                       $radio-outlined-height-Large;
+$--checkbox-bordered-padding:                                     ($radio-outlined-height-Large - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--checkbox-bordered-medium-padding:                              ($radio-outlined-height-Medium - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--checkbox-bordered-small-padding:                               ($radio-outlined-height-Small - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+//$--checkbox-bordered-mini-padding: 3px 15px 3px 10px !default;
+//$--checkbox-bordered-medium-input-height: 14px !default;
+//$--checkbox-bordered-medium-input-width: 14px !default;
+$--checkbox-bordered-medium-height:                                  $radio-outlined-height-Medium;
+//$--checkbox-bordered-small-input-height: 12px !default;
+//$--checkbox-bordered-small-input-width: 12px !default;
+$--checkbox-bordered-small-height:                                   $radio-outlined-height-Medium;
+//$--checkbox-bordered-mini-input-height: 12px !default;
+//$--checkbox-bordered-mini-input-width: 12px !default;
+//$--checkbox-bordered-mini-height: 28px !default;
+
+//$--checkbox-button-checked-background-color: $--color-primary !default;
+//$--checkbox-button-checked-font-color: $--color-white !default;
+//$--checkbox-button-checked-border-color: $--color-primary !default;
+
+.is-checked .el-checkbox__inner{
+    border-width: 2px;
+}
+.el-checkbox__inner{
+    border-width: $radio-regular-symbol-border-width;
+}
+.el-checkbox.is-bordered.is-checked{
+    background-color:                             $radio-outlined-selected-background;
+}

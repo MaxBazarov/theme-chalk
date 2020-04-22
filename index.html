@@ -99,7 +99,7 @@
                             <tr>
                                 <td>
                                     <el-menu :default-active="activeIndex" class="cb-topmenu" mode="horizontal"
-                                        @select="handTopMenuleSelect">
+                                        @select="handTopMenuleSelect" menu-trigger="click">
                                         <el-submenu index="1" popper-class="cb-topmenu-submenu">
                                             <template slot="title">Categories</template>
                                             <el-submenu index="1-1" class="cb-topmenu-submenu-item"
@@ -290,8 +290,8 @@
                         </el-col>
                     </el-row>
                     <!----------------------------------- PLAN DRAWER ------------------->
-                    <el-drawer :visible.sync="planDrawer" :direction="planDrawerDirection" :with-header="false"
-                        custom-class="cb-marketplace-drawer-plan">
+                    <el-drawer :visible.sync="planDrawer" :modal="false" :direction="planDrawerDirection"
+                        :with-header="false" custom-class="cb-marketplace-drawer-plan">
                         <!-- Header -->
                         <div class="header">
                             <table width="100%">
@@ -536,6 +536,38 @@
                             </el-cell>
                         </el-row>
                         <br />
+                        <el-row>
+                            <el-cell>
+                                Radio Buttons with border
+                                <el-radio v-model="radio" label="1" border>Selected</el-radio>
+                                <el-radio v-model="radio" label="2" size="medium" border>Unselected</el-radio>
+                                <el-radio disabled v-model="radio" size="small" label="disabled" border>Disabled
+                                </el-radio>
+                            </el-cell>
+                        </el-row>
+                        <br />
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Checkboxes:
+                                <el-checkbox v-model="checked1" label="1">Selected</el-checkbox>
+                                <el-checkbox v-model="checked2" label="2" size="medium">Unselected</el-checkbox>
+                                <el-checkbox disabled v-model="checked2" size="small" label="disabled">Disabled
+                                </el-checkbox>
+                            </el-cell>
+                        </el-row>
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Radio Buttons with border
+                                <el-checkbox v-model="checked1" label="1" border>Selected</el-checkbox>
+                                <el-checkbox v-model="checked2" label="2" size="medium" border>Unselected</el-checkbox>
+                                <el-checkbox disabled v-model="radio" size="small" label="disabled" border>Disabled
+                                </el-checkbox>
+                            </el-cell>
+                        </el-row>
+                        <br />
+                        <br />
                 </el-main>
                 <!--<el-footer>Footer</el-footer>-->
             </el-container>
@@ -570,6 +602,8 @@
                 visible: false,
                 activeName: 'first',
                 radio: '1',
+                checked1: true,
+                checked2: false,
                 planDrawerData: [{
                     plan: 'Office 365 Business Essentials',
                     cost: "$4.00",
