@@ -236,7 +236,17 @@
                                     the go.
                                 </div>
                                 <!-- Tabbar -->
-                                <el-tabs v-model="activeName" @tab-click="handleClick">
+                                <el-tabs v-model="activeName" @tab-click="handleClick" class="cb-tabs-large">
+                                    <el-tab-pane label="Pricing" name="first"></el-tab-pane>
+                                    <el-tab-pane label="Overview" name="second"></el-tab-pane>
+                                    <el-tab-pane label="Sales & Marketing materials" name="third"></el-tab-pane>
+                                </el-tabs>
+                                <el-tabs v-model="activeName" @tab-click="handleClick" class="cb-tabs-medium">
+                                    <el-tab-pane label="Pricing" name="first"></el-tab-pane>
+                                    <el-tab-pane label="Overview" name="second"></el-tab-pane>
+                                    <el-tab-pane label="Sales & Marketing materials" name="third"></el-tab-pane>
+                                </el-tabs>
+                                <el-tabs v-model="activeName" @tab-click="handleClick" class="cb-tabs-small">
                                     <el-tab-pane label="Pricing" name="first"></el-tab-pane>
                                     <el-tab-pane label="Overview" name="second"></el-tab-pane>
                                     <el-tab-pane label="Sales & Marketing materials" name="third"></el-tab-pane>

@@ -179,14 +179,7 @@ table.el-table__header{
     color:                                          $table-head-text-color;
 }
 
-///////////////////// TABS BAR /////////////////////
-.el-tabs__item{
-    padding:                    0 $tabs-item-padding-leftright;
-}
 
-.el-tabs{
-    padding-bottom:             $space-x-large;
-}
 ///////////////////// SIDE BAR /////////////////////
 div#app > section.el-container{
     height:                     100vh;
@@ -482,13 +475,51 @@ $--border-base:                 $button-border-width solid $color-border;
 
 /* Tab
 -------------------------- */
-$--tab-font-size:               $tabs-item-text-font-size;
+$--tab-font-size:               $tabs-item-text-font-size-Large;
 $--tab-border-line:             $tabs-item-line-regular-color;
 $--tab-header-color-active:     $tabs-item-text-selected-color;
 $--tab-header-color-hover:      $tabs-item-text-selected-color;
 $--tab-header-color:            $tabs-item-text-regular-color;
 $--tab-header-fill-active:      rgba($--color-black, 0.06) !default;
 $--tab-header-fill-hover:       rgba($--color-black, 0.06) !default;
+
+///////////////////// TABS BAR /////////////////////
+/*.el-tabs__item{
+    padding:                    0 $tabs-item-padding-leftright;
+}*/
+
+.cb-tabs-large .el-tabs__nav{
+    height:                       $tabs-item-height-Large;
+}
+.cb-tabs-large .el-tabs__item{
+    height:                       $tabs-item-text-font-size-Large;
+    line-height:                  $tabs-item-text-font-size-Large;
+    font-size:                    $tabs-item-text-font-size-Large;
+    margin-top:                   $tabs-item-text-margin-top;
+    padding:                      0 $tabs-item-text-margin-right-Large 0 0;
+}
+.cb-tabs-medium .el-tabs__nav{
+    height:                       $tabs-item-height-Medium;
+}
+.cb-tabs-medium .el-tabs__item{
+    height:                       $tabs-item-text-font-size-Medium;
+    line-height:                  $tabs-item-text-font-size-Medium;
+    font-size:                    $tabs-item-text-font-size-Medium;
+    margin-top:                   $tabs-item-text-margin-top;
+    padding:                      0 $tabs-item-text-margin-right-Medium 0 0;
+}
+.cb-tabs-small .el-tabs__nav{
+    height:                       $tabs-item-height-Small;
+}
+.cb-tabs-small .el-tabs__item{
+    height:                       $tabs-item-text-font-size-Small;
+    line-height:                  $tabs-item-text-font-size-Small;
+    font-size:                    $tabs-item-text-font-size-Small;
+    margin-top:                   $tabs-item-text-margin-top;
+    padding:                      0 $tabs-item-text-margin-right-Small 0 0;
+}
+
+
 //$--tab-vertical-header-width:   90px !default;
 //$--tab-vertical-header-count-color: $--color-white !default;
 //$--tab-vertical-header-count-fill: $--color-text-secondary !default;
