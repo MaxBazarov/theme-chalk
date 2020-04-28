@@ -1,27 +1,27 @@
 @import "cb-modern-ui-vars.scss";
 
 //////////////////////////////////////////////////////////////////////////////////
-////////////////////////////// OVERWRITE CSS ////////////////////////////////////
+////////////////////////////// overwrite css ////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
-// Setup font familty to override User Agent settings
+// setup font familty to override user agent settings
 input, textarea, keygen, select, button {
     font-family: $font-face-regular;
 }
 
-// Custom font size foe H1
+// custom font size foe h1
 h1 {
     font-size:                  $font-xx-large;
     font-weight:                $font-weight-medium;
 }
 
-// Setup custom weight for h3
+// setup custom weight for h3
 h2 {
     font-size:                  $font-x-large;
     font-weight:                $font-weight-medium;
 }
 
-// Setup custom weight for h3
+// setup custom weight for h3
 h3 {
     font-size:                  $font-large;
     font-weight:                $font-weight-medium;
@@ -55,7 +55,7 @@ span.info{
     line-height:                                    $font-large * $line-height-large;
 }
 
-/////////////// TOP BAR ///////////////////////////////////
+/////////////// top bar ///////////////////////////////////
 div.cb-topbar{
     display: flex;    align-items: center;
 }
@@ -66,10 +66,10 @@ div.cb-topbar{
     font-size:                  $top-bar-item-icon-font;
     color:                      $color-text;
 }
-///////////////// TOP MENU //////////////////////////////////
+///////////////// top menu //////////////////////////////////
 .cb-topmenu{
     background-color:                           transparent;
-    height:                                     $button-height-Large;    
+    height:                                     $button-height-large;    
     border-bottom:                              0px none !important;
 }
 
@@ -77,12 +77,12 @@ div.cb-topbar{
     .el-submenu__title,.el-menu-item{
         padding-left:                               0px;    
         border-bottom:                              0px none !important;
-        font-size:                                  $button-font-size-Large !important;
+        font-size:                                  $button-font-size-large !important;
         color:                                      $color-text-default !important;
         //vertical-align:                           middle;
         letter-spacing:                             $font-medium-spacing !important;
         font-weight:                                $font-weight-semibold !important;
-        height:                                     $button-height-Large !important;
+        height:                                     $button-height-large !important;
     }
 }
 
@@ -94,31 +94,31 @@ div.cb-topbar{
 
 .cb-topmenu-submenu-item,
 .cb-topmenu-submenu-item.div{
-    font-size:                                  $button-font-size-Medium !important;
+    font-size:                                  $button-font-size-medium !important;
     color:                                      $color-text-default !important;
     //vertical-align:                           middle;
     letter-spacing:                             $font-medium-spacing !important;
     font-weight:                                $font-weight-normal !important;
-    height:                                     $button-height-Medium !important;
+    height:                                     $button-height-medium !important;
 }
 .cb-topmenu-submenu-item .el-submenu__title{
-    font-size:                                  $button-font-size-Medium !important;
+    font-size:                                  $button-font-size-medium !important;
     color:                                      $color-text-default !important;
     //vertical-align:                           middle;
     letter-spacing:                             $font-medium-spacing !important;
     font-weight:                                $font-weight-normal !important;
-    height:                                     $button-height-Medium !important;
+    height:                                     $button-height-medium !important;
     background:                                 none;
 }
 
 // icon
 .cb-topmenu .el-submenu__title,
 .cb-topmenu .el-menu-item i{
-    font-size:                                  $button-font-size-Large !important;
+    font-size:                                  $button-font-size-large !important;
     color:                                      $color-text-default !important;
 }
 
-/////////////////////// TABLE ///////////////////////////
+/////////////////////// table ///////////////////////////
 .el-table{
     border-radius:                              $radius;
     border-color:                               $color-border;
@@ -180,7 +180,7 @@ table.el-table__header{
 }
 
 
-///////////////////// SIDE BAR /////////////////////
+///////////////////// side bar /////////////////////
 div#app > section.el-container{
     height:                     100vh;
 }
@@ -259,12 +259,12 @@ div#app > section.el-container{
 }
 
 
-////////////////////////////// TAGS ////////////////////////////////////
+////////////////////////////// tags ////////////////////////////////////
 .el-tag--mini{
-    height:                      $tag-height-Mini;
-    font-size:                   $tag-text-font-size-Mini;
-    font-weight:                 $tag-text-font-weight-Mini;
-    line-height:                 $tag-height-Mini;
+    height:                      $tag-height-mini;
+    font-size:                   $tag-text-font-size-mini;
+    font-weight:                 $tag-text-font-weight-mini;
+    line-height:                 $tag-height-mini;
     text-transform:              $tag-text-transform;
     display:                     inline;
     padding:                     0 $tag-text-margin;
@@ -293,14 +293,17 @@ div#app > section.el-container{
     color:                      $tag-dark-text-color;
 }
 
-////////////////////////////// CUSTOM INVERSIVE BUTTONS ////////////////////////////////////
+////////////////////////////// custom inversive buttons ////////////////////////////////////
 .cb-button-contrast{
     border-color:               $button-contrast-border-color;
     color:                      $button-contrast-text-color;
     background-color:           transparent;
 }
 
-////////////////////////////// TEXT BUTTONS ////////////////////////////////////
+////////////////////////////// text buttons ////////////////////////////////////
+.el-button--text{
+    border-color:               transparent;
+}
 .el-button--text.default{
     color:                      $color-text-default;
 }
@@ -320,7 +323,7 @@ div#app > section.el-container{
     color:                      $color-text-warning;
 }
 
-////////////////////////////// RIGHT SIDEBAR ("STAVNYA") ////////////////////////////////////
+////////////////////////////// right sidebar ("stavnya") ////////////////////////////////////
 .el-drawer{
     padding:                                      $space-xx-large;
     width:                                        $drawer-width !important;
@@ -330,9 +333,9 @@ div#app > section.el-container{
     border-width:                                 $drawer-back-border-width;
     border-radius:                                $drawer-back-border-radius;
 }
-////////////////////////////// CB MARKETPLACE STYLES ////////////////////////////////////
+////////////////////////////// cb marketplace styles ////////////////////////////////////
 
-// Browser / Plan
+// browser / plan
 .cb-marketplace-plan:hover{
     cursor:                                     pointer;
     background:                                 $mp-plan-background-hover;
@@ -392,7 +395,7 @@ div#app > section.el-container{
     }
 }
 
-// Product / Header
+// product / header
 .cb-marketplace-product{
     .header{
         background:                                 $mp-product-header-background-color;
@@ -418,7 +421,7 @@ div#app > section.el-container{
         }
     }   
 }
-// Drawer / Plan / Header
+// drawer / plan / header
 .cb-marketplace-drawer-plan{
     .header{
         //background:                                 $mp-product-header-background-color;
@@ -449,12 +452,12 @@ div#app > section.el-container{
     }
 }
 //////////////////////////////////////////////////////////////////////////////////
-////////////////////////////// ELEMENT TOKENS ////////////////////////////////////
+////////////////////////////// element tokens ////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
-/* Color
+/* color
 -------------------------- */
-/// color|1|Brand Color|0
+/// color|1|brand color|0
 $--color-primary:               $color-primary;
 $--color-white:                 $color-white;
 $--color-black:                 $color-black;
@@ -468,14 +471,14 @@ $--color-text-secondary:        $color-text-secondary;
 $--color-text-placeholder:      $color-text-disabled-contrast;
 $--border-color-base:           $color-border;
 
-/* Border
+/* border
 -------------------------- */
 $--border-base:                 $button-border-width solid $color-border;
 
 
-/* Tab
+/* tab
 -------------------------- */
-$--tab-font-size:               $tabs-item-text-font-size-Large;
+$--tab-font-size:               $font-large;
 $--tab-border-line:             $tabs-item-line-regular-color;
 $--tab-header-color-active:     $tabs-item-text-selected-color;
 $--tab-header-color-hover:      $tabs-item-text-selected-color;
@@ -483,40 +486,40 @@ $--tab-header-color:            $tabs-item-text-regular-color;
 $--tab-header-fill-active:      rgba($--color-black, 0.06) !default;
 $--tab-header-fill-hover:       rgba($--color-black, 0.06) !default;
 
-///////////////////// TABS BAR /////////////////////
+///////////////////// tabs bar /////////////////////
 /*.el-tabs__item{
     padding:                    0 $tabs-item-padding-leftright;
 }*/
 
 .cb-tabs-large .el-tabs__nav{
-    height:                       $tabs-item-height-Large;
+    height:                       $tabs-item-height-large;
 }
 .cb-tabs-large .el-tabs__item{
-    height:                       $tabs-item-text-font-size-Large;
-    line-height:                  $tabs-item-text-font-size-Large;
-    font-size:                    $tabs-item-text-font-size-Large;
-    margin-top:                   $tabs-item-text-margin-top;
-    padding:                      0 $tabs-item-text-margin-right-Large 0 0;
+    height:                       $font-large;
+    line-height:                  $font-large;
+    font-size:                    $font-large;
+    margin-top:                   $tabs-item-text-margin-top-large;
+    padding:                      0 $tabs-item-text-margin-right-large 0 0;
 }
 .cb-tabs-medium .el-tabs__nav{
-    height:                       $tabs-item-height-Medium;
+    height:                       $tabs-item-height-medium;
 }
 .cb-tabs-medium .el-tabs__item{
-    height:                       $tabs-item-text-font-size-Medium;
-    line-height:                  $tabs-item-text-font-size-Medium;
-    font-size:                    $tabs-item-text-font-size-Medium;
-    margin-top:                   $tabs-item-text-margin-top;
-    padding:                      0 $tabs-item-text-margin-right-Medium 0 0;
+    height:                       $font-medium;
+    line-height:                  $font-medium;
+    font-size:                    $font-medium;
+    margin-top:                   $tabs-item-text-margin-top-medium;
+    padding:                      0 $tabs-item-text-margin-right-medium 0 0;
 }
 .cb-tabs-small .el-tabs__nav{
-    height:                       $tabs-item-height-Small;
+    height:                       $tabs-item-height-small;
 }
 .cb-tabs-small .el-tabs__item{
-    height:                       $tabs-item-text-font-size-Small;
-    line-height:                  $tabs-item-text-font-size-Small;
-    font-size:                    $tabs-item-text-font-size-Small;
-    margin-top:                   $tabs-item-text-margin-top;
-    padding:                      0 $tabs-item-text-margin-right-Small 0 0;
+    height:                       $font-small;
+    line-height:                  $font-small;
+    font-size:                    $font-small;
+    margin-top:                   $tabs-item-text-margin-top-small;
+    padding:                      0 $tabs-item-text-margin-right-small 0 0;
 }
 
 
@@ -524,9 +527,9 @@ $--tab-header-fill-hover:       rgba($--color-black, 0.06) !default;
 //$--tab-vertical-header-count-color: $--color-white !default;
 //$--tab-vertical-header-count-fill: $--color-text-secondary !default;
 
-/* Table
+/* table
 -------------------------- */
-/// color||Color|0
+/// color||color|0
 $--table-border-color:                      $color-border;
 //$--table-border:                            none;
 $--table-font-color:                        $color-text-default;
@@ -536,27 +539,27 @@ $--table-header-font-color:                 $table-head-text-color;
 $--table-header-background-color:           $table-head-background;
 
 
-/* Button
+/* button
 -------------------------- */
-// TODO: We have much more margings in Sketch - what to do?
+// todo: we have much more margings in sketch - what to do?
 $--button-font-size: $font-medium;
 $--button-font-weight: $font-weight-normal;
 $--button-border-radius: $radius;
 
-$--button-padding-vertical:             ($button-height-Large - $button-font-size-Large - $button-border-width *2)/2;
-$--button-padding-horizontal:           $button-label-margin-left-Large;
+$--button-padding-vertical:             ($button-height-large - $button-font-size-large - $button-border-width *2)/2;
+$--button-padding-horizontal:           $button-label-margin-left-large;
 
 $--button-medium-font-size: $font-medium;
 $--button-medium-font-weight: $font-weight-normal;
 $--button-medium-border-radius: $radius;
-$--button-medium-padding-vertical:      ($button-height-Medium - $button-font-size-Medium - $button-border-width*2)/2;
-$--button-medium-padding-horizontal:    $button-label-margin-left-Medium;
+$--button-medium-padding-vertical:      ($button-height-medium - $button-font-size-medium - $button-border-width*2)/2;
+$--button-medium-padding-horizontal:    $button-label-margin-left-medium;
 
 
 $--button-small-font-size: $font-small;
 $--button-small-border-radius:  $radius-small;
-$--button-small-padding-vertical:      ($button-height-Small - $button-font-size-Small - $button-border-width*2)/2;
-$--button-small-padding-horizontal:    $button-label-margin-left-Small;
+$--button-small-padding-vertical:      ($button-height-small - $button-font-size-small - $button-border-width*2)/2;
+$--button-small-padding-horizontal:    $button-label-margin-left-small;
 
 $--button-default-font-color: $color-text-default;
 $--button-default-background-color: $color-white;
@@ -590,17 +593,17 @@ $--button-info-background-color: $color-background-secondary;
 //$--button-active-shade-percent: 10% !default;
 
 
-/* Input
+/* input
 -------------------------- 
-TODO: 
-1) Elements hardcodes:
+todo: 
+1) elements hardcodes:
    padding: 5px 15px;
-   What to do it with it?
+   what to do it with it?
 
 */
-$--input-font-size:                 $text-input-font-size-Large;
+$--input-font-size:                 $text-input-font-size-large;
 $--input-font-color:                $color-text;
-$--input-height:                    $widget-Large;
+$--input-height:                    $widget-large;
 $--input-border:                    $--border-base;
 $--input-border-color:              $color-border;
 $--input-border-radius:             $radius-medium;
@@ -620,20 +623,20 @@ $--input-disabled-border:           $color-border-disabled;
 $--input-disabled-color:            $color-text-disabled;
 $--input-disabled-placeholder-color: $color-text-disabled-contrast;
 
-$--input-medium-font-size:          $text-input-font-size-Medium;
-$--input-medium-height:             $widget-Medium;
-$--input-small-font-size:           $text-input-font-size-Small;
-$--input-small-height:              $widget-Small;
-$--input-mini-font-size:            $text-input-font-size-Mini;
-$--input-mini-height:               $widget-Mini;
+$--input-medium-font-size:          $text-input-font-size-medium;
+$--input-medium-height:             $widget-medium;
+$--input-small-font-size:           $text-input-font-size-small;
+$--input-small-height:              $widget-small;
+$--input-mini-font-size:            $text-input-font-size-mini;
+$--input-mini-height:               $widget-mini;
 
 
-// Box-shadow
+// box-shadow
 $--box-shadow-base:                 $shadow-medium;
 $--box-shadow-dark:                 $shadow-x-large;
 $--box-shadow-light:                $shadow-large;
 
-/* Typography
+/* typography
 -------------------------- */
 //$--font-path: 'fonts' !default;
 $--font-display:                    $font-face-regular;
@@ -651,35 +654,35 @@ $--font-size-extra-small:           $font-small;
 //$--font-color-disabled-base: #bbb !default;
 
 
-/* Card
+/* card
 --------------------------*/
-/// color||Color|0
+/// color||color|0
 $--card-border-color:                $color-border;
 $--card-border-radius:               $radius;
 $--card-padding:                     $card-padding;
 
 
-/* Header
+/* header
   --------------------------*/
 $--header-padding:                  0px $content-padding 0px $content-padding;
 
-/* Main
+/* main
 --------------------------*/
 $--main-padding:                    0px $content-padding $space-x-large $content-padding;
 
 
-/* Backtop
+/* backtop
 --------------------------*/
 $--backtop-background-color:        $top-bar-background;
 $--backtop-font-color:              $top-bar-item-text;
-// TODO SHADOW ???  $top-bar-background-shadow
+// todo shadow ???  $top-bar-background-shadow
 //$--backtop-hover-background-color:  $--border-color-extra-light !default;
 
 
 
-/* Link
+/* link
 --------------------------*/
-/// fontSize||Font|1
+/// fontsize||font|1
 $--link-font-size:                  $font-medium;
 $--link-font-weight:                $font-weight-medium;
 $--link-default-font-color:         $color-text;
@@ -692,14 +695,14 @@ $--link-danger-font-color:          $color-text-danger;
 $--link-info-font-color:            $color-text-secondary;
 
 
-/* Backtop
+/* backtop
 --------------------------*/
 $--backtop-background-color:        $color-background-stage;
 //$--backtop-font-color: $--color-primary !default;
 //$--backtop-hover-background-color: $--border-color-extra-light !default;
 
 
-/* Menu
+/* menu
 --------------------------*/
 $--menu-item-font-size:             $side-bar-item-font;
 $--menu-item-font-color:            $side-bar-item-text;
@@ -707,7 +710,7 @@ $--menu-background-color:           $side-bar-background;
 $--menu-item-hover-fill:            $side-bar-item-text-hovered;
 
 
-/* Tag
+/* tag
 -------------------------- */
 $--tag-info-color:                  $color-text-secondary;
 $--tag-primary-color:               $color-primary;
@@ -720,14 +723,14 @@ $--tag-padding:                     0 $tag-text-margin;
 
 
 
-/* Radio
+/* radio
 -------------------------- */
 $--radio-font-size:                                         $font-medium;
 $--radio-font-weight:                                       $font-weight-normal;
 
-// height of regular Large oval
+// height of regular large oval
 $--radio-input-height:                                      $radio-symbol-size;
-// width of regular Large oval
+// width of regular large oval
 $--radio-input-width:                                       $radio-symbol-size;
 // border of regular oval
 $--radio-input-border:                                      $radio-regular-symbol-border-width solid $radio-regular-symbol-color;
@@ -754,17 +757,17 @@ $--radio-checked-font-color:                                $color-text;
 
 //$--radio-input-border-color-hover: $--color-primary !default;
 
-$--radio-bordered-height:                                      $radio-outlined-height-Large;
-$--radio-bordered-padding:                                     ($radio-outlined-height-Large - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
-$--radio-bordered-medium-padding:                              ($radio-outlined-height-Medium - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
-$--radio-bordered-small-padding:                               ($radio-outlined-height-Small - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--radio-bordered-height:                                      $radio-outlined-height-large;
+$--radio-bordered-padding:                                     ($radio-outlined-height-large - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--radio-bordered-medium-padding:                              ($radio-outlined-height-medium - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--radio-bordered-small-padding:                               ($radio-outlined-height-small - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
 //$--radio-bordered-mini-padding: 6px 15px 0 10px !default;
 //$--radio-bordered-medium-input-height: 14px !default;
 //$--radio-bordered-medium-input-width: 14px !default;
-$--radio-bordered-medium-height:                              $radio-outlined-height-Medium;
+$--radio-bordered-medium-height:                              $radio-outlined-height-medium;
 //$--radio-bordered-small-input-height: 12px !default;
 //$--radio-bordered-small-input-width: 12px !default;
-$--radio-bordered-small-height:                               $radio-outlined-height-Small;
+$--radio-bordered-small-height:                               $radio-outlined-height-small;
 //$--radio-bordered-mini-input-height: 12px !default;
 //$--radio-bordered-mini-input-width: 12px !default;
 //$--radio-bordered-mini-height: 28px !default;
@@ -788,7 +791,7 @@ $--radio-bordered-small-height:                               $radio-outlined-he
     background-color:                             $radio-outlined-selected-background;
 }
 
-/* Checkbox
+/* checkbox
 -------------------------- */
 $--checkbox-font-size:                              $font-medium;
 $--checkbox-font-weight:                            $font-weight-normal;
@@ -814,17 +817,17 @@ $--checkbox-checked-font-color:                     $color-text;
 //$--checkbox-checked-icon-color: $--fill-base !default;
 
 //$--checkbox-input-border-color-hover: $--color-primary !default;
-$--checkbox-bordered-height:                       $radio-outlined-height-Large;
-$--checkbox-bordered-padding:                                     ($radio-outlined-height-Large - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
-$--checkbox-bordered-medium-padding:                              ($radio-outlined-height-Medium - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
-$--checkbox-bordered-small-padding:                               ($radio-outlined-height-Small - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--checkbox-bordered-height:                       $radio-outlined-height-large;
+$--checkbox-bordered-padding:                                     ($radio-outlined-height-large - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--checkbox-bordered-medium-padding:                              ($radio-outlined-height-medium - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--checkbox-bordered-small-padding:                               ($radio-outlined-height-small - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
 //$--checkbox-bordered-mini-padding: 3px 15px 3px 10px !default;
 //$--checkbox-bordered-medium-input-height: 14px !default;
 //$--checkbox-bordered-medium-input-width: 14px !default;
-$--checkbox-bordered-medium-height:                                  $radio-outlined-height-Medium;
+$--checkbox-bordered-medium-height:                                  $radio-outlined-height-medium;
 //$--checkbox-bordered-small-input-height: 12px !default;
 //$--checkbox-bordered-small-input-width: 12px !default;
-$--checkbox-bordered-small-height:                                   $radio-outlined-height-Medium;
+$--checkbox-bordered-small-height:                                   $radio-outlined-height-medium;
 //$--checkbox-bordered-mini-input-height: 12px !default;
 //$--checkbox-bordered-mini-input-width: 12px !default;
 //$--checkbox-bordered-mini-height: 28px !default;
@@ -841,4 +844,23 @@ $--checkbox-bordered-small-height:                                   $radio-outl
 }
 .el-checkbox.is-bordered.is-checked{
     background-color:                             $radio-outlined-selected-background;
+}
+
+/* Dropdown
+-------------------------- */
+//$--dropdown-menu-box-shadow:                         $dropdown-back-shadow;
+//$--dropdown-menuItem-hover-fill:                     $--color-primary-light-9 !default;
+//$--dropdown-menuItem-hover-color:                    $--link-color !default;
+
+.el-dropdown-menu.el-popper{
+    box-shadow:                                        $dropdown-back-shadow;
+    background-color:                                  $color-background-container;
+    border-color:                                      $dropdown-back-border-color;
+    border-width:                                      $dropdown-back-border-width;
+    padding:                                           $dropdown-padding;
+}
+.el-dropdown-menu.el-popper .el-dropdown-menu__item{
+    line-height:                                       $dropdown-item-height;        
+    padding-left:                                      $dropdown-item-label-margin-left;
+    padding-right:                                     $dropdown-item-label-margin-left;
 }
