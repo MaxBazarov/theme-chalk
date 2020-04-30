@@ -626,6 +626,33 @@
                         </el-row>
                         <br />
                         <br />
+                        <el-row>
+                            <el-cell>
+                                Avatar
+                                <el-avatar :size="large" :src="circleUrl"></el-avatar>
+                            </el-cell>
+                        </el-row>
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                <el-badge :value="12" class="item">
+                                    <el-button size="small">comments</el-button>
+                                </el-badge>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <el-badge :value="3" class="item">
+                                    <el-button size="small">replies</el-button>
+                                </el-badge>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <el-badge :value="1" class="item" type="primary">
+                                    <el-button size="small">comments</el-button>
+                                </el-badge>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <el-badge :value="2" class="item" type="warning">
+                                    <el-button size="small">replies</el-button>
+                                </el-badge>
+                            </el-cell>
+                        </el-row>
+                        <br />
                 </el-main>
                 <!--<el-footer>Footer</el-footer>-->
             </el-container>
@@ -662,6 +689,7 @@
                 radio: '1',
                 checked1: true,
                 checked2: false,
+                circleUrl: "images/avatar.png",
                 planDrawerData: [{
                     plan: 'Office 365 Business Essentials',
                     cost: "$4.00",

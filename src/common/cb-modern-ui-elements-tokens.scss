@@ -938,3 +938,32 @@ $--checkbox-bordered-small-height:                                   $radio-outl
     padding-left:                                      $dropdown-item-label-margin-left;
     padding-right:                                     $dropdown-item-label-margin-left;
 }
+
+
+
+/* Avatar
+--------------------------*/
+$--avatar-font-color:                                  $avatar-icon-color;
+$--avatar-background-color:                            $avatar-background-color;
+//$--avatar-text-font-size: 14px !default;
+//.$--avatar-icon-font-size: 18px !default;
+//$--avatar-border-radius:                             $--border-radius-base !default;
+$--avatar-large-size:                                  $avatar-size;
+//$--avatar-medium-size: 36px !default;
+//$--avatar-small-size: 28px !default;
+
+
+/* Badge
+-------------------------- */
+/// color||Color|0
+//$--badge-background-color:               $--color-danger !default;
+//$--badge-radius: 10px !default;
+/// fontSize||Font|1
+$--badge-font-size:                                    $badge-font-size;
+//$--badge-padding: 6px !default;
+/// height||Other|4
+$--badge-size:                                         $badge-size;
+
+.el-badge__content{
+    font-weight:                                        $badge-font-weight;
+}
