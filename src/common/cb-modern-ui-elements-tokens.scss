@@ -729,9 +729,9 @@ $--radio-font-size:                                         $font-medium;
 $--radio-font-weight:                                       $font-weight-normal;
 
 // height of regular large oval
-$--radio-input-height:                                      $radio-symbol-size;
+$--radio-input-height:                                      $radio-symbol-size-large;
 // width of regular large oval
-$--radio-input-width:                                       $radio-symbol-size;
+$--radio-input-width:                                       $radio-symbol-size-large;
 // border of regular oval
 $--radio-input-border:                                      $radio-regular-symbol-border-width solid $radio-regular-symbol-color;
 //$--radio-input-border-radius:         $radio-outlined-border-radius;
@@ -758,9 +758,9 @@ $--radio-checked-font-color:                                $color-text;
 //$--radio-input-border-color-hover: $--color-primary !default;
 
 $--radio-bordered-height:                                      $radio-outlined-height-large;
-$--radio-bordered-padding:                                     ($radio-outlined-height-large - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
-$--radio-bordered-medium-padding:                              ($radio-outlined-height-medium - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
-$--radio-bordered-small-padding:                               ($radio-outlined-height-small - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--radio-bordered-padding:                                     ($radio-outlined-height-large - $radio-symbol-size-large)/2 $radio-outlined-symbol-margin-left-large 0 $radio-outlined-symbol-margin-left-large;
+$--radio-bordered-medium-padding:                              ($radio-outlined-height-medium - $radio-symbol-size-medium)/2 $radio-outlined-symbol-margin-left-medium 0 $radio-outlined-symbol-margin-left-medium;
+$--radio-bordered-small-padding:                               ($radio-outlined-height-small - $radio-symbol-size-small)/2 $radio-outlined-symbol-margin-left-small 0 $radio-outlined-symbol-margin-left-small;
 //$--radio-bordered-mini-padding: 6px 15px 0 10px !default;
 //$--radio-bordered-medium-input-height: 14px !default;
 //$--radio-bordered-medium-input-width: 14px !default;
@@ -781,11 +781,48 @@ $--radio-bordered-small-height:                               $radio-outlined-he
 //$--radio-button-checked-border-color: $--color-primary !default;
 //$--radio-button-disabled-checked-fill: $--border-color-extra-light !default;
         
-.el-radio__inner::after{
-    $size:                                        $radio-symbol-size - $radio-selected-symbol-border-width*2;      
+.cb-size-large.is-checked.el-radio .el-radio__inner::after{
+    $size:                                        $radio-symbol-size-large - $radio-selected-symbol-border-width*2;      
     height:                                       $size;
     width:                                        $size;
+    border-width:                                 $radio-selected-symbol-border-width;
 }
+
+.cb-size-medium.is-checked  .el-radio__inner::after{
+    $size:                                        $radio-symbol-size-medium - $radio-selected-symbol-border-width*2;      
+    height:                                       $size;
+    width:                                        $size;
+    border-width:                                 $radio-selected-symbol-border-width;
+}
+
+.cb-size-small.is-checked .el-radio__inner::after{
+    $size:                                        $radio-symbol-size-small - $radio-selected-symbol-border-width*2;      
+    height:                                       $size;
+    width:                                        $size;
+    border-width:                                 $radio-selected-symbol-border-width;
+}
+//
+.cb-size-large.el-radio .el-radio__inner::after{
+    $size:                                        $radio-symbol-size-large - $radio-regular-symbol-border-width*2;      
+    height:                                       $size;
+    width:                                        $size;
+    border-width:                                 $radio-regular-symbol-border-width;
+}
+
+.cb-size-medium  .el-radio__inner::after{
+    $size:                                        $radio-symbol-size-medium - $radio-regular-symbol-border-width*2;      
+    height:                                       $size;
+    width:                                        $size;
+    border-width:                                 $radio-regular-symbol-border-width;
+}
+
+.cb-size-small .el-radio__inner::after{
+    $size:                                        $radio-symbol-size-small - $radio-regular-symbol-border-width*2;      
+    height:                                       $size;
+    width:                                        $size;
+    border-width:                                 $radio-regular-symbol-border-width;
+}
+
 
 .el-radio.is-bordered.is-checked{
     background-color:                             $radio-outlined-selected-background;
@@ -797,8 +834,8 @@ $--checkbox-font-size:                              $font-medium;
 $--checkbox-font-weight:                            $font-weight-normal;
 
 //$--checkbox-font-color: $--color-text-regular !default;
-$--checkbox-input-height:                           $radio-symbol-size;
-$--checkbox-input-width:                            $radio-symbol-size;
+$--checkbox-input-height:                           $radio-symbol-size-large;
+$--checkbox-input-width:                            $radio-symbol-size-large;
 $--checkbox-border-radius:                          $checkbox-border-radius;
 //$--checkbox-background-color: $--color-white !default;
 $--checkbox-input-border:                           $radio-regular-symbol-border-width solid $radio-regular-symbol-color;
@@ -818,9 +855,9 @@ $--checkbox-checked-font-color:                     $color-text;
 
 //$--checkbox-input-border-color-hover: $--color-primary !default;
 $--checkbox-bordered-height:                       $radio-outlined-height-large;
-$--checkbox-bordered-padding:                                     ($radio-outlined-height-large - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
-$--checkbox-bordered-medium-padding:                              ($radio-outlined-height-medium - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
-$--checkbox-bordered-small-padding:                               ($radio-outlined-height-small - $radio-symbol-size)/2 $radio-outlined-symbol-margin-left 0 $radio-outlined-symbol-margin-left;
+$--checkbox-bordered-padding:                                     ($radio-outlined-height-large - $radio-symbol-size-large)/2 $radio-outlined-symbol-margin-left-large 0 $radio-outlined-symbol-margin-left-large;
+$--checkbox-bordered-medium-padding:                              ($radio-outlined-height-medium - $radio-symbol-size-medium)/2 $radio-outlined-symbol-margin-left-medium 0 $radio-outlined-symbol-margin-left-medium;
+$--checkbox-bordered-small-padding:                               ($radio-outlined-height-small - $radio-symbol-size-small)/2 $radio-outlined-symbol-margin-left-small 0 $radio-outlined-symbol-margin-left-small;
 //$--checkbox-bordered-mini-padding: 3px 15px 3px 10px !default;
 //$--checkbox-bordered-medium-input-height: 14px !default;
 //$--checkbox-bordered-medium-input-width: 14px !default;
@@ -845,6 +882,43 @@ $--checkbox-bordered-small-height:                                   $radio-outl
 .el-checkbox.is-bordered.is-checked{
     background-color:                             $radio-outlined-selected-background;
 }
+
+.cb-size-large.is-checked.el-checkbox .el-checkbox__inner{
+    $size:                                        $radio-symbol-size-large;
+    height:                                       $size;
+    width:                                        $size;    
+}
+
+.cb-size-medium.is-checked  .el-checkbox__inner{
+    $size:                                        $radio-symbol-size-medium;
+    height:                                       $size;
+    width:                                        $size;
+}
+
+.cb-size-small.is-checked .el-checkbox__inner{
+    $size:                                        $radio-symbol-size-small;
+    height:                                       $size;
+    width:                                        $size; 
+}
+//
+.cb-size-large.el-radio .el-checkbox__inner{
+    $size:                                        $radio-symbol-size-large ;    
+    height:                                       $size;
+    width:                                        $size;
+}
+
+.cb-size-medium  .el-checkbox__inner{
+    $size:                                        $radio-symbol-size-medium;
+    height:                                       $size;
+    width:                                        $size;
+}
+
+.cb-size-small .el-checkbox__inner{
+    $size:                                        $radio-symbol-size-small;
+    height:                                       $size;
+    width:                                        $size;
+}
+
 
 /* Dropdown
 -------------------------- */

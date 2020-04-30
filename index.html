@@ -539,19 +539,42 @@
                         <br />
                         <el-row>
                             <el-cell>
-                                Radio Buttons
-                                <el-radio v-model="radio" label="1">Selected</el-radio>
-                                <el-radio v-model="radio" label="2" size="medium">Unselected</el-radio>
-                                <el-radio disabled v-model="radio" size="small" label="disabled">Disabled</el-radio>
+                                Radio Buttons Large
+                                <el-radio v-model="radio" class="cb-size-large" label="1">Selected</el-radio>
+                                <el-radio v-model="radio" class="cb-size-large" label="2">Unselected</el-radio>
+                                <el-radio disabled v-model="radio" class="cb-size-large" label="disabled">Disabled
+                                </el-radio>
+                            </el-cell>
+                        </el-row>
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Radio Buttons Medium
+                                <el-radio v-model="radio" class="cb-size-medium" label="1">Selected</el-radio>
+                                <el-radio v-model="radio" class="cb-size-medium" label="2">Unselected</el-radio>
+                                <el-radio disabled v-model="radio" class="cb-size-medium" label="disabled">Disabled
+                                </el-radio>
+                            </el-cell>
+                        </el-row>
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Radio Buttons Small
+                                <el-radio v-model="radio" class="cb-size-small" label="1">Selected</el-radio>
+                                <el-radio v-model="radio" label="2" class="cb-size-small">Unselected</el-radio>
+                                <el-radio disabled v-model="radio" class="cb-size-small" label="disabled">Disabled
+                                </el-radio>
                             </el-cell>
                         </el-row>
                         <br />
                         <el-row>
                             <el-cell>
                                 Radio Buttons with border
-                                <el-radio v-model="radio" label="1" border>Selected</el-radio>
-                                <el-radio v-model="radio" label="2" size="medium" border>Unselected</el-radio>
-                                <el-radio disabled v-model="radio" size="small" label="disabled" border>Disabled
+                                <el-radio v-model="radio" label="1" class="cb-size-large" border>Selected</el-radio>
+                                <el-radio v-model="radio" label="2" class="cb-size-medium" size="medium" border>
+                                    Unselected</el-radio>
+                                <el-radio disabled v-model="radio" class="cb-size-small" size="small" label="disabled"
+                                    border>Disabled
                                 </el-radio>
                             </el-cell>
                         </el-row>
@@ -559,10 +582,32 @@
                         <br />
                         <el-row>
                             <el-cell>
-                                Checkboxes:
-                                <el-checkbox v-model="checked1" label="1">Selected</el-checkbox>
-                                <el-checkbox v-model="checked2" label="2" size="medium">Unselected</el-checkbox>
-                                <el-checkbox disabled v-model="checked2" size="small" label="disabled">Disabled
+                                Checkboxes Large:
+                                <el-checkbox v-model="checked1" class="cb-size-large" label="1">Selected</el-checkbox>
+                                <el-checkbox v-model="checked2" class="cb-size-large" label="2">Unselected</el-checkbox>
+                                <el-checkbox disabled v-model="checked2" class="cb-size-large" label="disabled">Disabled
+                                </el-checkbox>
+                            </el-cell>
+                        </el-row>
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Checkboxes Medium:
+                                <el-checkbox v-model="checked1" class="cb-size-medium" label="1">Selected</el-checkbox>
+                                <el-checkbox v-model="checked2" label="2" class="cb-size-medium">Unselected
+                                </el-checkbox>
+                                <el-checkbox disabled v-model="checked2" class="cb-size-medium" label="disabled">
+                                    Disabled
+                                </el-checkbox>
+                            </el-cell>
+                        </el-row>
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Checkboxes Small:
+                                <el-checkbox v-model="checked1" class="cb-size-small" label="1">Selected</el-checkbox>
+                                <el-checkbox v-model="checked2" label="2" class="cb-size-small">Unselected</el-checkbox>
+                                <el-checkbox disabled v-model="checked2" class="cb-size-small" label="disabled">Disabled
                                 </el-checkbox>
                             </el-cell>
                         </el-row>
@@ -570,9 +615,12 @@
                         <el-row>
                             <el-cell>
                                 Radio Buttons with border
-                                <el-checkbox v-model="checked1" label="1" border>Selected</el-checkbox>
-                                <el-checkbox v-model="checked2" label="2" size="medium" border>Unselected</el-checkbox>
-                                <el-checkbox disabled v-model="radio" size="small" label="disabled" border>Disabled
+                                <el-checkbox v-model="checked1" label="1" class="cb-size-large" border>Selected
+                                </el-checkbox>
+                                <el-checkbox v-model="checked2" label="2" class="cb-size-medium" size="medium" border>
+                                    Unselected</el-checkbox>
+                                <el-checkbox disabled v-model="radio" class="cb-size-small" size="small"
+                                    label="disabled" border>Disabled
                                 </el-checkbox>
                             </el-cell>
                         </el-row>
