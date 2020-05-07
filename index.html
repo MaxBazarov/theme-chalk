@@ -514,6 +514,8 @@
                             </el-cell>
                         </el-row>
                         <br />
+                        <br />
+                        <br />
                         <el-row>
                             <el-cell>
                                 Dark Tags:
@@ -536,6 +538,8 @@
                                 <el-tag size="mini" effect="light" type="success">Success</el-tag>
                             </el-cell>
                         </el-row>
+                        <br />
+                        <br />
                         <br />
                         <el-row>
                             <el-cell>
@@ -580,6 +584,7 @@
                         </el-row>
                         <br />
                         <br />
+                        <br />
                         <el-row>
                             <el-cell>
                                 Checkboxes Large:
@@ -612,9 +617,11 @@
                             </el-cell>
                         </el-row>
                         <br />
+                        <br />
+                        <br />
                         <el-row>
                             <el-cell>
-                                Radio Buttons with border
+                                Checkboxes Buttons with border
                                 <el-checkbox v-model="checked1" label="1" class="cb-size-large" border>Selected
                                 </el-checkbox>
                                 <el-checkbox v-model="checked2" label="2" class="cb-size-medium" size="medium" border>
@@ -632,6 +639,8 @@
                                 <el-avatar :size="large" :src="circleUrl"></el-avatar>
                             </el-cell>
                         </el-row>
+                        <br />
+                        <br />
                         <br />
                         <el-row>
                             <el-cell>
@@ -652,6 +661,33 @@
                                 </el-badge>
                             </el-cell>
                         </el-row>
+                        <br />
+                        <br />
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Switch (Large):
+                                <el-switch class="cb-size-large" v-model="switch1">
+                                </el-switch>
+                                <el-switch class="cb-size-large" v-model="switch2">
+                                </el-switch>
+                            </el-cell>
+                            <el-cell>
+                                Switch (Medium):
+                                <el-switch class="cb-size-medium" v-model="switch1">
+                                </el-switch>
+                                <el-switch class="cb-size-medium" v-model="switch2">
+                                </el-switch>
+                            </el-cell>
+                            <el-cell>
+                                Switch (Small):
+                                <el-switch class="cb-size-small" v-model="switch1">
+                                </el-switch>
+                                <el-switch class="cb-size-small" v-model="switch2">
+                                </el-switch>
+                            </el-cell>
+                        </el-row>
+                        <br />
                         <br />
                 </el-main>
                 <!--<el-footer>Footer</el-footer>-->
@@ -680,6 +716,8 @@
         },
         data: function () {
             return {
+                switch1: true,
+                switch2: false,
                 planDrawer: false,
                 planDrawerDirection: "rtl",
                 input: 'test me',

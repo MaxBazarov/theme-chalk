@@ -967,3 +967,49 @@ $--badge-size:                                         $badge-size;
 .el-badge__content{
     font-weight:                                        $badge-font-weight;
 }
+
+
+/* Switch
+-------------------------- */
+/// color||Color|0
+//$--switch-on-color:                                     $--color-primary !default;
+//$--switch-off-color:                                    $--border-color-base !default;
+/// fontSize||Font|1
+//$--switch-font-size: $--font-size-base !default;
+$--switch-core-border-radius:                            10px;
+$--switch-width:                                         40px;
+$--switch-height:                                        20px;
+$--switch-button-size:                                   16px;
+
+.el-switch.cb-size-large{
+    height:                                              $switch-height-large;
+    width:                                               $switch-width-large;
+}
+.el-switch.cb-size-large .el-switch__core{
+    border-radius:                                       $switch-border-radius-large;
+}
+
+.el-switch.is-checked .el-switch__core{
+    border-color:                                        $switch-on-border-color;
+}
+.el-switch:not(.is-checked) .el-switch__core{
+    background-color:                                    $switch-off-back-color;
+    border-color:                                        $switch-off-border-color;
+    border-radius:                                       $switch-border-radius-large;
+}
+
+.el-switch.cb-size-medium{
+    height:                                              $switch-height-medium;
+    width:                                               $switch-width-medium;
+}
+.el-switch.cb-size-medium .el-switch__core{
+    border-radius:                                       $switch-border-radius-medium;
+}
+
+.el-switch.cb-size-small{
+    height:                                              $switch-height-small;
+    width:                                               $switch-width-small;
+}
+.el-switch.cb-size-small .el-switch__core{
+    border-radius:                                       $switch-border-radius-small;
+}
