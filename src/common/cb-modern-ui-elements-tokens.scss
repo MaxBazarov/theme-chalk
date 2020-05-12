@@ -602,33 +602,40 @@ todo:
 
 */
 $--input-font-size:                 $text-input-font-size-large;
+$--input-medium-font-size:          $text-input-font-size-medium;
+$--input-small-font-size:           $text-input-font-size-small;
+
+$--input-height:                    $text-input-height-large;
+$--input-medium-height:             $text-input-height-medium;
+$--input-small-height:              $text-input-height-small;
+
 $--input-font-color:                $color-text;
-$--input-height:                    $widget-large;
 $--input-border:                    $--border-base;
 $--input-border-color:              $color-border;
-$--input-border-radius:             $radius-medium;
-//$--input-border-color-hover:      $--border-color-hover !default;
+$--input-border-radius:             $text-input-border-radius-large;
+
 $--input-background-color:          $color-background-container;
 $--input-fill-disabled:             $color-background-disabled;
 $--input-color-disabled:            $color-text-disabled;
+
 $--input-icon-color:                $color-text-disabled-contrast;
 $--input-placeholder-color:         $color-text-disabled-contrast;
 //$--input-hover-border: $--border-color-hover !default;
 //$--input-clear-hover-color: $--color-text-secondary !default;
-$--input-focus-border:              $color-border-active;
-$--input-focus-fill:                $color-background-container;
+$--input-focus-border:                  $color-border;
+$--input-focus-fill:                    $color-background-container;
 
 $--input-disabled-fill:             $color-background-disabled;
 $--input-disabled-border:           $color-border-disabled;
 $--input-disabled-color:            $color-text-disabled;
 $--input-disabled-placeholder-color: $color-text-disabled-contrast;
 
-$--input-medium-font-size:          $text-input-font-size-medium;
-$--input-medium-height:             $widget-medium;
-$--input-small-font-size:           $text-input-font-size-small;
-$--input-small-height:              $widget-small;
-$--input-mini-font-size:            $text-input-font-size-mini;
-$--input-mini-height:               $widget-mini;
+
+.el-input:not(.el-input-number--medium):not(.el-input-number--small) .el-input__inner{
+    font-size:                      $text-input-font-size-large; 
+}
+
+
 
 
 // box-shadow
