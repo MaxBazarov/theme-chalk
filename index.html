@@ -709,6 +709,17 @@
                                 </el-input-number>
                             </el-cell>
                         </el-row>
+                        <br />
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Slider:
+                                <el-slider v-model="slider1"></el-slider>
+                                <el-slider v-model="slider1" disabled></el-slider>
+                                <el-slider v-model="slider1" :step="10" show-stops></el-slider>
+                                <el-slider v-model="slider1" :marks="marks"></el-slider>
+                            </el-cell>
+                        </el-row>
                 </el-main>
                 <!--<el-footer>Footer</el-footer>-->
             </el-container>
@@ -739,6 +750,15 @@
                 num1: 123,
                 num2: 123,
                 num3: 123,
+                slider1: 23,
+                marks: {
+                    0: "0",
+                    10: "10",
+                    20: "20",
+                    30: "30",
+                    40: "40",
+                    50: "50",
+                },
                 switch1: true,
                 switch2: false,
                 planDrawer: false,
