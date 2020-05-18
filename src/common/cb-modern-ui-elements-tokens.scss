@@ -1046,3 +1046,75 @@ $--slider-button-size:                                   $slider-button-height;
     border-color:                                       $slider-button-border-color;
     border-width:                                       $slider-button-border-width;
 }
+
+.el-slider__runway.hover{
+}
+
+/* Select
+-------------------------- */
+//$--select-border-color-hover:                           $--border-color-hover !default;
+///$--select-disabled-border:                               $--disabled-border-base !default;
+/// fontSize||Font|1
+$--select-font-size:                                         $text-input-font-size-large;
+//$--select-close-hover-color: $--color-text-secondary !default;
+
+$--select-input-color:                                      $text-input-text-color;
+//$--select-multiple-input-color: #666 !default;
+$--select-input-focus-border-color:                         $color-border-primary;
+
+
+$--select-option-color:                                     $text-input-text-color;
+$--select-option-disabled-color:                            $color-text-secondary;
+$--select-option-disabled-background:                       $color-background-container;
+$--select-option-height:                                    $select-menu-item-height;
+
+//$--select-option-hover-background: $--background-color-base !default;
+$--select-option-selected-font-color:                       $color-text-primary;
+//$--select-option-selected-hover: $--background-color-base !default;
+
+//$--select-group-color: $--color-info !default;
+//$--select-group-height: 30px !default;
+//$--select-group-font-size: 12px !default;
+
+$--select-dropdown-background:                              $color-background-container;
+$--select-dropdown-shadow:                                  $dropdown-back-shadow;
+//$--select-dropdown-empty-color: #999 !default;
+//$--select-dropdown-max-height: 274px !default;
+$--select-dropdown-padding:                                 $select-menu-item-margin-left 0;
+//$--select-dropdown-empty-padding: 10px 0 !default;
+$--select-dropdown-border:                                  solid $dropdown-back-border-width $dropdown-back-border-color !default;
+
+.el-select:not(.el-select--medium):not(.el-select--large) .el-input:not(.el-select--medium):not(.el-select--large) .el-input__inner{
+    font-size:                                          $text-input-font-size-large;                  
+    line-height:                                        $text-input-line-height-large;                  
+}
+
+.el-select.el-select--medium .el-input.el-input--medium .el-input__inner{
+    font-size:                                          $text-input-font-size-medium;                  
+    line-height:                                        $text-input-line-height-medium;                  
+}
+
+.el-select.el-select--small .el-input.el-input--small .el-input__inner{
+    font-size:                                          $text-input-font-size-small;
+    line-height:                                        $text-input-line-height-small;
+}
+
+.el-select-dropdown__item{
+    padding-left:                                       $select-menu-item-margin-left;
+}
+
+.el-select-dropdown__item span{
+    font-size:                                          $select-menu-item-font-size;    
+}
+
+
+.el-select-group__wrap::after{
+    left:                                               0px !important;
+    right:                                              0px !important;
+    background-color:                                   $select-menu-divider-color !important;
+}
+
+.el-select .el-input .el-select__caret{
+    font-size:                                          $select-menu-item-icon-size;
+    color:                                              $text-input-text-color;
+}

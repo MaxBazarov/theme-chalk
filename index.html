@@ -720,6 +720,34 @@
                                 <el-slider v-model="slider1" :marks="marks"></el-slider>
                             </el-cell>
                         </el-row>
+                        <br />
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Select:
+                                <el-select v-model="select1" placeholder="Select">
+                                    <el-option-group v-for="group in options" :key="group.label" :label="group.label">
+                                        <el-option v-for="item in group.options" :key="item.value" :label="item.label"
+                                            :value="item.value">
+                                        </el-option>
+                                    </el-option-group>
+                                </el-select>
+                                <el-select v-model="select2" placeholder="Select" size="medium">
+                                    <el-option-group v-for="group in options" :key="group.label" :label="group.label">
+                                        <el-option v-for="item in group.options" :key="item.value" :label="item.label"
+                                            :value="item.value">
+                                        </el-option>
+                                    </el-option-group>
+                                </el-select>
+                                <el-select v-model="select3" placeholder="Select" size="small">
+                                    <el-option-group v-for="group in options" :key="group.label" :label="group.label">
+                                        <el-option v-for="item in group.options" :key="item.value" :label="item.label"
+                                            :value="item.value">
+                                        </el-option>
+                                    </el-option-group>
+                                </el-select>
+                            </el-cell>
+                        </el-row>
                 </el-main>
                 <!--<el-footer>Footer</el-footer>-->
             </el-container>
@@ -759,6 +787,34 @@
                     40: "40",
                     50: "50",
                 },
+                options: [{
+                    label: '',
+                    options: [{
+                        value: 'Shanghai',
+                        label: 'Shanghai'
+                    }, {
+                        value: 'Beijing',
+                        label: 'Beijing'
+                    }]
+                }, {
+                    label: '',
+                    options: [{
+                        value: 'Chengdu',
+                        label: 'Chengdu'
+                    }, {
+                        value: 'Shenzhen',
+                        label: 'Shenzhen'
+                    }, {
+                        value: 'Guangzhou',
+                        label: 'Guangzhou'
+                    }, {
+                        value: 'Dalian',
+                        label: 'Dalian'
+                    }]
+                }],
+                select1: "",
+                select2: "",
+                select3: "",
                 switch1: true,
                 switch2: false,
                 planDrawer: false,
