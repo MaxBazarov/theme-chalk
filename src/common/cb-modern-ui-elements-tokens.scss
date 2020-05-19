@@ -1084,7 +1084,7 @@ $--select-dropdown-padding:                                 $select-menu-item-ma
 //$--select-dropdown-empty-padding: 10px 0 !default;
 $--select-dropdown-border:                                  solid $dropdown-back-border-width $dropdown-back-border-color !default;
 
-.el-select:not(.el-select--medium):not(.el-select--large) .el-input:not(.el-select--medium):not(.el-select--large) .el-input__inner{
+.el-select:not(.el-select--medium):not(.el-select--small) .el-input:not(.el-select--medium):not(.el-select--small) .el-input__inner{
     font-size:                                          $text-input-font-size-large;                  
     line-height:                                        $text-input-line-height-large;                  
 }
@@ -1107,6 +1107,11 @@ $--select-dropdown-border:                                  solid $dropdown-back
     font-size:                                          $select-menu-item-font-size;    
 }
 
+.el-select-dropdown__item.selected span{
+    font-size:                                          $select-menu-item-font-size;  
+    color:                                              $color-text-primary;
+    font-weight:                                        $select-menu-item-selected-font-weight !important;
+}   
 
 .el-select-group__wrap::after{
     left:                                               0px !important;
@@ -1118,3 +1123,52 @@ $--select-dropdown-border:                                  solid $dropdown-back
     font-size:                                          $select-menu-item-icon-size;
     color:                                              $text-input-text-color;
 }
+
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+    background-color:                                   $select-menu-item-selected-background-color !important;
+}
+
+
+/* Cascader
+-------------------------- */
+$--cascader-menu-font-color:                            $text-input-text-color;
+$--cascader-menu-selected-font-color:                   $color-text-primary;
+$--cascader-menu-fill:                                  $color-background-container;
+$--cascader-menu-font-size:                             $select-menu-item-font-size;
+$--cascader-menu-radius:                                $dropdown-back-border-radius;
+$--cascader-menu-border:                                solid $dropdown-back-border-width $dropdown-back-border-color;
+$--cascader-menu-shadow:                                $dropdown-back-shadow;
+//$--cascader-node-background-hover: $--background-color-base !default;
+$--cascader-node-color-disabled:                        $color-text-secondary;
+//$--cascader-color-empty:$--color-text-placeholder !default;
+//$--cascader-tag-background: #f0f2f5;
+
+.el-cascader .el-input .el-input__icon,
+.el-cascader-node__postfix{
+    font-size:                                           $select-menu-item-icon-size;
+    color:                                               $text-input-text-color;
+}
+
+.el-cascader:not(.el-cascader--medium):not(.el-cascader--small) .el-input:not(.el-select--medium):not(.el-cascader--small) .el-input__inner{
+    font-size:                                          $text-input-font-size-large;                  
+    line-height:                                        $text-input-line-height-large;                  
+}
+
+.el-cascader.el-cascader--medium .el-input.el-input--medium .el-input__inner{
+    font-size:                                          $text-input-font-size-medium;                  
+    line-height:                                        $text-input-line-height-medium;                  
+}
+
+.el-cascader.el-cascader--small .el-input.el-input--small .el-input__inner{
+    line-height:                                        $text-input-line-height-small;
+}
+
+.el-cascader-node:not(.is-disabled):focus, .el-cascader-node:not(.is-disabled):hover {
+    background-color:                                   $select-menu-item-selected-background-color !important;
+}
+
+.el-cascader-node.in-active-path span{
+    font-size:                                          $select-menu-item-font-size;  
+    color:                                              $color-text-primary;
+    font-weight:                                        $select-menu-item-selected-font-weight !important;
+}   

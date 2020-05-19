@@ -722,6 +722,7 @@
                         </el-row>
                         <br />
                         <br />
+                        <!--###################### SELECT #################-->
                         <el-row>
                             <el-cell>
                                 Select:
@@ -746,6 +747,24 @@
                                         </el-option>
                                     </el-option-group>
                                 </el-select>
+                            </el-cell>
+                        </el-row>
+                        <!--###################### CASCADER #################-->
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <el-row>
+                            <el-cell>
+                                Cascader:
+                                <el-cascader v-model="cascader_value" :options="cascader_options" placeholder="Select">
+                                </el-cascader>
+                                <el-cascader v-model="cascader_value" size="medium" :options="cascader_options"
+                                    placeholder="Select">
+                                </el-cascader>
+                                <el-cascader v-model="cascader_value" size="small" :options="cascader_options"
+                                    placeholder="Select">
+                                </el-cascader>
                             </el-cell>
                         </el-row>
                 </el-main>
@@ -775,6 +794,109 @@
         },
         data: function () {
             return {
+                cascader_value: [],
+                cascader_options: [{
+                    value: 'guide',
+                    label: 'Guide',
+                    children: [{
+                        value: 'disciplines',
+                        label: 'Disciplines',
+                    }, {
+                        value: 'navigation',
+                        label: 'Navigation',
+
+                    }]
+                }, {
+                    value: 'component',
+                    label: 'Component',
+                    children: [{
+                        value: 'basic',
+                        label: 'Basic',
+                        children: [{
+                            value: 'layout',
+                            label: 'Layout'
+                        }, {
+                            value: 'color',
+                            label: 'Color'
+                        }, {
+                            value: 'typography',
+                            label: 'Typography'
+                        }, {
+                            value: 'icon',
+                            label: 'Icon'
+                        }, {
+                            value: 'button',
+                            label: 'Button'
+                        }]
+                    }, {
+                        value: 'form',
+                        label: 'Form',
+                        children: [{
+                            value: 'radio',
+                            label: 'Radio'
+                        }]
+                    }, {
+                        value: 'data',
+                        label: 'Data',
+                        children: [{
+                            value: 'table',
+                            label: 'Table'
+                        }, {
+                            value: 'tag',
+                            label: 'Tag'
+                        }, {
+                            value: 'progress',
+                            label: 'Progress'
+                        }, {
+                            value: 'tree',
+                            label: 'Tree'
+                        }, {
+                            value: 'pagination',
+                            label: 'Pagination'
+                        }, {
+                            value: 'badge',
+                            label: 'Badge'
+                        }]
+                    }, {
+                        value: 'notice',
+                        label: 'Notice',
+                        children: [{
+                            value: 'alert',
+                            label: 'Alert'
+                        }, {
+                            value: 'loading',
+                            label: 'Loading'
+                        }, {
+                            value: 'message',
+                            label: 'Message'
+                        }, {
+                            value: 'message-box',
+                            label: 'MessageBox'
+                        }, {
+                            value: 'notification',
+                            label: 'Notification'
+                        }]
+                    }, {
+                        value: 'navigation',
+                        label: 'Navigation',
+                        children: [{
+                            value: 'menu',
+                            label: 'NavMenu'
+                        }, {
+                            value: 'tabs',
+                            label: 'Tabs'
+                        }, {
+                            value: 'breadcrumb',
+                            label: 'Breadcrumb'
+                        }, {
+                            value: 'dropdown',
+                            label: 'Dropdown'
+                        }, {
+                            value: 'steps',
+                            label: 'Steps'
+                        }]
+                    }]
+                }],
                 num1: 123,
                 num2: 123,
                 num3: 123,
