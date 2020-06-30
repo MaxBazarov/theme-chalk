@@ -1172,3 +1172,36 @@ $--cascader-node-color-disabled:                        $color-text-secondary;
     color:                                              $color-text-primary;
     font-weight:                                        $select-menu-item-selected-font-weight !important;
 }   
+
+/* Icon 
+--------------------------------*/
+
+i[class^=el-icon-]{
+    font-size:                                          $font-large;
+}
+
+i.cb-icon-default{
+    color:                                          $color-text-default;
+}
+i.cb-icon-primary{
+    color:                                          $color-text-primary;
+}
+i.cb-icon-success{
+    color:                                          $color-text-success;
+}
+i.cb-icon-info{
+    color:                                          $color-text-info;
+}
+i.cb-icon-warning{
+    color:                                          $color-text-warning;
+}
+i.cb-icon-danger{
+    color:                                          $color-text-danger;
+}
+
+/* Link
+--------------------------------*/
+.cb-link-underline-dashed{
+    text-decoration-style:                          dashed;
+    text-decoration-line:                           underline;
+}
