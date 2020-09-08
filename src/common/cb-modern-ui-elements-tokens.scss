@@ -1205,3 +1205,19 @@ i.cb-icon-danger{
     text-decoration-style:                          dashed;
     text-decoration-line:                           underline;
 }
+
+/* Upload
+-------------------------------*/
+.el-upload__tip{
+    @extend small;
+}
+
+.el-upload-list__item a .el-icon-document:before{
+    font-family:                                    'Font Awesome 5 Free'!important;
+    content:                                        "\f15b";
+}   
+
+.el-upload-list__item.is-success label .el-icon-upload-success.el-icon-circle-check:before{
+    font-family:                                    'Font Awesome 5 Free'!important;
+    content:                                        "\f00c";
+}
