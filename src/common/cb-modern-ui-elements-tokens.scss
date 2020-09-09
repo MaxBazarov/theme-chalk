@@ -1206,7 +1206,7 @@ i.cb-icon-danger{
     text-decoration-line:                           underline;
 }
 
-/* Upload
+/* Upload: FileList
 -------------------------------*/
 .el-upload__tip{
     @extend small;
@@ -1220,4 +1220,10 @@ i.cb-icon-danger{
 .el-upload-list__item.is-success label .el-icon-upload-success.el-icon-circle-check:before{
     font-family:                                    'Font Awesome 5 Free'!important;
     content:                                        "\f00c";
+}
+
+/* Notice / Loading
+--------------------------------*/
+.el-loading-spinner .circular .path{
+    stroke-width:                                   $loading-stroke-width;
 }

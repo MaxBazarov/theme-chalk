@@ -775,35 +775,36 @@
                             <i class="el-icon-fa-trash fas cb-icon-danger"></i>
                         </el-row>
                         <br /><br />
-                        <el-row>
-                            LINLKS:
-                            <el-link href="https://element.eleme.io" target="_blank">Default</el-link>
-                            <el-link type="primary">Primary</el-link>
-                            <el-link type="success"><span class="cb-link-underline-dashed">Success</span></el-link>
-                            <el-link type="warning">Warning</el-link>
-                            <el-link icon="el-icon-fa-trash fas" type="danger">Danger</el-link>
-                            <el-link type="info">Info</el-link>
-                        </el-row>
-                        <br /><br />
-                        <el-row>
-                            UPLOAD (FileList):<br /><br />
-                            <el-upload class="upload-demo" action="https://jsonplaceholder.typicode.com/posts/"
-                                :on-preview="handlePreview" :on-remove="handleRemove" :before-remove="beforeRemove"
-                                multiple :limit="3" :on-exceed="handleExceed" :file-list="fileList">
-                                <el-button size="medium" type="primary">Click to upload</el-button>
-                                <div slot="tip" class="el-upload__tip">jpg/png files with a size less than 500kb</div>
-                            </el-upload>
-                            <!-- -->
-                        </el-row>
-                        <br /><br />
-                        <el-row>
-                            UPLOAD (PhotoWall):<br /><br />
-                            <el-upload action="https://jsonplaceholder.typicode.com/posts/" list-type="picture-card"
-                                :on-preview="handlePictureCardPreview" :on-remove="handleRemove">
-                                <i class="el-icon-plus"></i>
-                            </el-upload>
-                        </el-row>
-                        <br /><br />
+                        <el-divider>LINKS</el-divider>
+                        <el-link href="https://element.eleme.io" target="_blank">Default</el-link>
+                        <el-link type="primary">Primary</el-link>
+                        <el-link type="success"><span class="cb-link-underline-dashed">Success</span></el-link>
+                        <el-link type="warning">Warning</el-link>
+                        <el-link icon="el-icon-fa-trash fas" type="danger">Danger</el-link>
+                        <el-link type="info">Info</el-link>
+                        <el-divider>UPLOAD (FileList)</el-divider>
+                        <el-upload class="upload-demo" action="https://jsonplaceholder.typicode.com/posts/"
+                            :on-preview="handlePreview" :on-remove="handleRemove" :before-remove="beforeRemove" multiple
+                            :limit="3" :on-exceed="handleExceed" :file-list="fileList">
+                            <el-button size="medium" type="primary">Click to upload</el-button>
+                            <div slot="tip" class="el-upload__tip">jpg/png files with a size less than 500kb</div>
+                        </el-upload>
+                        <!-- -->
+                        <el-divider>UPLOAD (PhotoWall)</el-divider>
+                        <el-upload action="https://jsonplaceholder.typicode.com/posts/" list-type="picture-card"
+                            :on-preview="handlePictureCardPreview" :on-remove="handleRemove">
+                            <i class="el-icon-plus"></i>
+                        </el-upload>
+                        <el-divider>NOTICE / LOADING</el-divider>
+                        <!-- LOADING -->
+                        <el-table v-loading="loading" :data="tableData" style="width: 100%">
+                            <el-table-column prop="date" label="Date" width="180">
+                            </el-table-column>
+                            <el-table-column prop="name" label="Name" width="180">
+                            </el-table-column>
+                            <el-table-column prop="address" label="Address">
+                            </el-table-column>
+                        </el-table>
                 </el-main>
                 <!--<el-footer>Footer</el-footer>-->
             </el-container>
@@ -831,6 +832,20 @@
         },
         data: function () {
             return {
+                tableData: [{
+                    date: '2016-05-02',
+                    name: 'John Smith',
+                    address: 'No.1518,  Jinshajiang Road, Putuo District'
+                }, {
+                    date: '2016-05-04',
+                    name: 'John Smith',
+                    address: 'No.1518,  Jinshajiang Road, Putuo District'
+                }, {
+                    date: '2016-05-01',
+                    name: 'John Smith',
+                    address: 'No.1518,  Jinshajiang Road, Putuo District'
+                }],
+                loading: true,
                 fileList: [{
                     name: 'food.jpeg',
                     url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
