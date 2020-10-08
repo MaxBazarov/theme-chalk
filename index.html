@@ -473,9 +473,26 @@
                                 </el-col>
                             </el-row>
                             <br />
-                            <!-- ALERT -->
+                            <!-- Breadcrumb -->
+                            <el-divider>NAVIGATION / Breadcrumb Regular</el-divider>
+                            <el-breadcrumb separator-class="el-icon-fa-chevron-right fas">
+                                <el-breadcrumb-item :to="{ path: '/' }">Home</el-breadcrumb-item>
+                                <el-breadcrumb-item :to="{ path: '/' }">Products</el-breadcrumb-item>
+                                <el-breadcrumb-item></el-breadcrumb-item>
+                            </el-breadcrumb>
+                            <el-divider>NAVIGATION / Breadcrumb Back</el-divider>
+                            <el-breadcrumb separator-class="el-icon-fa-chevron-left fas" class="cb-breadcrumb-back">
+                                <el-breadcrumb-item></el-breadcrumb-item>
+                                <el-breadcrumb-item :to="{ path: '/' }">Back
+                                </el-breadcrumb-item>
+                            </el-breadcrumb>
+                            <!-- DATEPICKER -->
                             <el-divider>FORM / DATEPICKER</el-divider>
-                            <el-date-picker v-model="date1" type="date" placeholder="Pick a day">
+                            <el-date-picker v-model="date1" type="date" placeholder="Select date">
+                            </el-date-picker>
+                            <el-date-picker v-model="date1" type="date" size="medium" placeholder="Select date">
+                            </el-date-picker>
+                            <el-date-picker v-model="date1" type="date" size="mini" placeholder="Select date">
                             </el-date-picker>
                             <!-- ALERT -->
                             <el-divider>NOTICE / ALERT</el-divider>

@@ -555,7 +555,7 @@ $--color-info:                  $color-text-secondary;
 $--color-text-primary:          $color-text;
 $--color-text-regular:          $color-text;
 $--color-text-secondary:        $color-text-secondary;
-$--color-text-placeholder:      $color-text-disabled-contrast;
+$--color-text-placeholder:      $text-input-placeholder-color;
 $--border-color-base:           $color-border;
 
 /* border
@@ -706,7 +706,7 @@ $--input-fill-disabled:             $color-background-disabled;
 $--input-color-disabled:            $color-text-disabled;
 
 $--input-icon-color:                $color-text-disabled-contrast;
-$--input-placeholder-color:         $color-text-disabled-contrast;
+$--input-placeholder-color:         $text-input-placeholder-color;
 //$--input-hover-border: $--border-color-hover !default;
 //$--input-clear-hover-color: $--color-text-secondary !default;
 $--input-focus-border:                  $color-border;
@@ -1392,4 +1392,109 @@ $--alert-icon-large-size:                            $alert-icon-font-size;
 }
 .el-alert--error.is-light{
     border-left:                                    $alert-left-border-width solid $alert-warning-border-color;
+}
+
+
+/* DatePicker
+--------------------------*/
+/// $--datepicker-font-color: $--color-text-regular !default;
+$--datepicker-off-font-color:                       $color-text-secondary;
+///$--datepicker-header-font-color: $--color-text-regular !default;
+$--datepicker-icon-color:                           $color-text-secondary;
+//$--datepicker-border-color:                       $--disabled-border-base !default;
+//$--datepicker-inner-border-color:                 #e4e4e4 !default;
+//$--datepicker-inrange-background-color: $--border-color-extra-light !default;
+/// color||Color|0
+//$--datepicker-inrange-hover-background-color: $--border-color-extra-light !default;
+/// color||Color|0
+//$--datepicker-active-color: $--color-primary !default;
+/// color||Color|0
+//$--datepicker-hover-font-color: $--color-primary !default;
+//$--datepicker-cell-hover-color: #fff !default;
+
+
+.el-date-editor:not(.el-input--medium):not(.el-input--small){
+    .el-input__prefix{
+        right:                                    $text-input-state-icon-margin-right-large;
+    }
+    .el-input__icon{
+        font-size:                                $select-symbol-size-large;
+    }
+    .el-input__inner{
+        padding-left:                             $text-input-text-margin-left-large;
+        font-size:                                $text-input-font-size-large;
+    }
+}
+.el-date-editor.el-input--medium{
+    .el-input__prefix{
+        right:                                    $text-input-state-icon-margin-right-medium;
+    }
+    .el-input__icon{
+        font-size:                                $select-symbol-size-medium;
+    }
+    .el-input__inner{
+        padding-left:                             $text-input-text-margin-left-medium;
+        font-size:                                $text-input-font-size-medium;
+    }
+}
+.el-date-editor.el-input--small{
+    .el-input__prefix{
+        right:                                    $text-input-state-icon-margin-right-small;
+    }
+    .el-input__icon{
+        font-size:                                $select-symbol-size-small;
+    }
+    .el-input__inner{
+        padding-left:                             $text-input-text-margin-left-small;
+        font-size:                                $text-input-font-size-small;
+    }
+}
+.el-date-editor{
+    .el-input__prefix{
+        //left:                                     unset;     
+        display:none;
+    }
+    .el-input__icon{
+        color:                                    $color-text-secondary;        
+    }
+}
+
+
+
+.el-picker-panel{
+    background-color:                                           $color-background-container;
+    border-color:                                               $dropdown-back-border-color;
+    border-width:                                               $dropdown-back-border-width;
+    border-radius:                                              $dropdown-back-border-radius;
+    box-shadow:                                                 $dropdown-back-shadow;
+}
+
+
+/* Breadcrumb
+--------------------------------*/
+.el-breadcrumb__inner{
+    color:                                          $color-text-secondary  !important;
+    font-size:                                      $font-medium;
+    letter-spacing:                                 $font-spacing-medium;
+    line-height:                                    $font-line-height-medium;
+    font-family:                                    $font-face-heading;
+    font-weight:                                    $font-weight-normal;
+}
+
+/*
+.el-breadcrumb__item:last-of-type:not(.cb-breadcrumb-back){
+    display:                                        none   !important;
+}
+*/
+
+.cb-breadcrumb-back .el-breadcrumb__item .el-breadcrumb__inner{
+    color:                                          $color-text-primary  !important;
+    font-weight:                                    $font-weight-medium;
+    letter-spacing:                                 $font-spacing-medium;
+    line-height:                                    $font-line-height-medium;
+    font-family:                                    $font-face-heading;
+}
+
+.cb-breadcrumb-back .el-breadcrumb__item i{
+    color:                                          $color-text-primary  !important;
 }
