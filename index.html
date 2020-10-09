@@ -473,6 +473,10 @@
                                 </el-col>
                             </el-row>
                             <br />
+                            <!-- Pagination -->
+                            <el-divider>DATS / Pagination</el-divider>
+                            <el-pagination :page-size="20" :pager-count="11" layout="prev, pager, next" :total="1000">
+                            </el-pagination>
                             <!-- Breadcrumb -->
                             <el-divider>NAVIGATION / Breadcrumb Regular</el-divider>
                             <el-breadcrumb separator-class="el-icon-fa-chevron-right fas">

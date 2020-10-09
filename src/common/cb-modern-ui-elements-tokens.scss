@@ -1497,4 +1497,39 @@ $--datepicker-icon-color:                           $color-text-secondary;
 
 .cb-breadcrumb-back .el-breadcrumb__item i{
     color:                                          $color-text-primary  !important;
+    font-weight:                                    bold;
+}
+
+
+/* Pagination
+--------------------------------*/
+$--pagination-font-size:                            $font-medium !default;
+//$--pagination-font-color:                           $--color-text-primary !default;
+//$--pagination-border-radius: 3px !default;
+//$--pagination-button-color: $--color-text-primary !default;
+/// height||Other|4
+$--pagination-button-width:                         $button-icon-width-large;
+/// height||Other|4
+$--pagination-button-height:                        $button-icon-width-large;
+/// color||Color|0
+//$--pagination-button-disabled-color: $--color-text-placeholder !default;
+/// color||Color|0
+//$--pagination-button-disabled-background-color: $--color-white !default;
+/// color||Color|0
+
+.el-pager li{
+    font-weight:                                    $font-weight-normal;
+    height:                                         $button-icon-width-large;
+    min-width:                                      $button-icon-width-large;
+    padding:                                        0px;
+}
+
+.el-pagination{
+    .btn-prev,.btn-next{
+        //height:                                       $button-icon-width-large;
+        //min-width:                                    $button-icon-width-large;
+        line-height:                                    $button-icon-width-large;
+        padding:                                        0px !important;
+        vertical-align:                                 middle;
+    }
 }
