@@ -474,7 +474,14 @@
                             </el-row>
                             <br />
                             <!-- Pagination -->
-                            <el-divider>DATS / Pagination</el-divider>
+                            <el-divider>DATA / PROGRESS</el-divider>
+                            <el-progress :percentage="50"></el-progress>
+                            <el-progress :percentage="100" :format="format"></el-progress>
+                            <el-progress :percentage="100" status="success"></el-progress>
+                            <el-progress :percentage="100" status="warning"></el-progress>
+                            <el-progress :percentage="50" status="exception"></el-progress>
+                            <!-- Pagination -->
+                            <el-divider>DATA / Pagination</el-divider>
                             <el-pagination :page-size="20" :pager-count="11" layout="prev, pager, next" :total="1000">
                             </el-pagination>
                             <!-- Breadcrumb -->
@@ -909,6 +916,9 @@
     new Vue({
         el: '#app',
         methods: {
+            format(percentage) {
+                return percentage === 100 ? 'Full' : `${percentage}%`;
+            },
             handleOpen(key, keyPath) {
                 console.log(key, keyPath);
             },
