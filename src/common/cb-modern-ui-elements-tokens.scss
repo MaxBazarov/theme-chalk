@@ -52,7 +52,7 @@ span.info{
     margin-bottom:                                  $space-x-large;
     color:                                          $color-text-secondary;
     font-weight:                                    $font-weight-normal;
-    line-height:                                    $font-large * $line-height-large;
+    line-height:                                    $font-line-height-large;
 }
 
 /////////////// top bar ///////////////////////////////////
@@ -498,13 +498,13 @@ div#app > section.el-container{
             @extend h1;
             color:                                      $color-text-default-contrast;
             vertical-align:                             top;
-            line-height:                                $font-x-large * $line-height-medium;
+            line-height:                                $font-line-height-medium;
         }
         .vendor{
             color:                                      $color-text-default-contrast;
             opacity:                                    $mp-product-header-vendor-text-opacity;
             vertical-align:                             top;
-            line-height:                                $font-medium * $line-height-medium;
+            line-height:                                $font-line-height-medium;
         }
     }   
 }
@@ -524,13 +524,13 @@ div#app > section.el-container{
             @extend h1;
             color:                                      $color-text-default;
             vertical-align:                             top;
-            line-height:                                $font-x-large * $line-height-medium;
+            line-height:                                $font-line-height-medium;
         }
         .vendor{
             color:                                      $color-text-default;
             //opacity:                                    $mp-product-header-vendor-text-opacity;
             vertical-align:                             top;
-            line-height:                                $font-medium * $line-height-medium;
+            line-height:                                $font-line-height-medium;
         }
     }   
     .prices{
@@ -825,7 +825,7 @@ $--radio-input-height:                                      $radio-symbol-size-l
 // width of regular large oval
 $--radio-input-width:                                       $radio-symbol-size-large;
 // border of regular oval
-$--radio-input-border:                                      $radio-regular-symbol-border-width solid $radio-regular-symbol-color;
+$--radio-input-border:                                      $radio-regular-symbol-border-width solid $radio-regular-symbol-border-color;
 //$--radio-input-border-radius:         $radio-outlined-border-radius;
 //  background color of regular oval
 $--radio-input-background-color:                              $color-white;
@@ -946,7 +946,7 @@ $--checkbox-input-height:                           $radio-symbol-size-large;
 $--checkbox-input-width:                            $radio-symbol-size-large;
 $--checkbox-border-radius:                          $checkbox-border-radius;
 //$--checkbox-background-color: $--color-white !default;
-$--checkbox-input-border:                           $radio-regular-symbol-border-width solid $radio-regular-symbol-color;
+$--checkbox-input-border:                           $radio-regular-symbol-border-width solid $radio-regular-symbol-border-color;
 
 //$--checkbox-disabled-border-color: $--border-color-base !default;
 //$--checkbox-disabled-input-fill: #edf2fc !default;
