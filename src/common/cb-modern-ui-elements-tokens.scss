@@ -5,7 +5,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 // setup font familty to override user agent settings
-input, textarea, keygen, select, button {
+input, textarea, keygen, select, button,span,div {
     font-family: $font-face-regular;
 }
 
@@ -65,7 +65,7 @@ div.cb-topbar{
     padding-right:                                      0px;    
 }
 .cb-topbar-icon {
-    font-size:                                          $top-bar-item-icon-font;
+    font-size:                                          $top-bar-item-icon-size;
     color:                                              $color-text;
 }
 .cb-topbar{
@@ -1353,9 +1353,9 @@ $--alert-warning-color:                             $alert-warning-back-color;
 $--alert-danger-color:                              $alert-error-back-color;
 
 /// height||Other|4
-$--alert-icon-size:                                 $alert-compact-icon-font-size;
+$--alert-icon-size:                                 $alert-compact-icon-size;
 /// height||Other|4
-$--alert-icon-large-size:                            $alert-icon-font-size;
+$--alert-icon-large-size:                            $alert-icon-size;
 
 .el-alert{
     align-items:                                    unset;
@@ -1364,7 +1364,7 @@ $--alert-icon-large-size:                            $alert-icon-font-size;
 .el-alert__closebtn.el-icon-close{
     color:                                          $alert-close-color;
     font-size:                                      $alert-close-font-size;
-    font-weight:                                    $alert-icon-font-weight;
+    //font-weight:                                    $alert-icon-font-weight;
 }
 
 .el-alert .el-alert__description{
@@ -1372,7 +1372,8 @@ $--alert-icon-large-size:                            $alert-icon-font-size;
 }
 
 .el-alert__title{
-    font-weight:                                    $alert-label-font-weight;
+    //font-family:                                    $font-face-regular;
+    font-weight:                                    $alert-label-font-weight !important;;
     color:                                          $alert-label-color;
 }
 
