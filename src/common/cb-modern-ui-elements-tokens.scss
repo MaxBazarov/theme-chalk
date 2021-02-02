@@ -990,37 +990,46 @@ $--checkbox-bordered-small-height:                                   $radio-outl
 .el-checkbox.is-bordered.is-checked{
     background-color:                             $radio-outlined-selected-background;
 }
-
-.cb-size-large.is-checked.el-checkbox .el-checkbox__inner{
+/* -- CHECKBOX : LARGE -- */
+.el-checkbox.cb-size-large  .el-checkbox__inner{
     $size:                                        $radio-symbol-size-large;
     height:                                       $size;
     width:                                        $size;    
 }
-
-.cb-size-medium.is-checked  .el-checkbox__inner{
+.el-checkbox.cb-size-large .el-checkbox__label{
+    font-size:                                   $radio-label-font-size-large;
+}
+/* -- CHECKBOX : MEDIUM -- */
+.el-checkbox.cb-size-medium.is-checked  .el-checkbox__inner{
     $size:                                        $radio-symbol-size-medium;
     height:                                       $size;
     width:                                        $size;
 }
-
-.cb-size-small.is-checked .el-checkbox__inner{
+.el-checkbox.cb-size-medium .el-checkbox__label{
+    font-size:                                   $radio-label-font-size-medium;
+}
+/* -- CHECKBOX : SMALL-- */
+.el-checkbox.cb-size-small.is-checked .el-checkbox__inner{
     $size:                                        $radio-symbol-size-small;
     height:                                       $size;
     width:                                        $size; 
 }
-//
+.el-checkbox.cb-size-small .el-checkbox__label{
+    font-size:                                   $radio-label-font-size-small;
+}
+/* -- RADIO : LARGE -- */
 .cb-size-large.el-radio .el-checkbox__inner{
     $size:                                        $radio-symbol-size-large ;    
     height:                                       $size;
     width:                                        $size;
 }
-
-.cb-size-medium  .el-checkbox__inner{
+/* -- RADIO : MEDIUM-- */
+.el-radio.cb-size-medium  .el-checkbox__inner{
     $size:                                        $radio-symbol-size-medium;
     height:                                       $size;
     width:                                        $size;
 }
-
+/* -- RADIO : SMALL-- */
 .cb-size-small .el-checkbox__inner{
     $size:                                        $radio-symbol-size-small;
     height:                                       $size;
@@ -1241,7 +1250,7 @@ $--cascader-menu-font-size:                             $select-menu-item-font-s
 $--cascader-menu-radius:                                $dropdown-back-border-radius;
 $--cascader-menu-border:                                solid $dropdown-back-border-width $dropdown-back-border-color;
 $--cascader-menu-shadow:                                $dropdown-back-shadow;
-//$--cascader-node-background-hover: $--background-color-base !default;
+//$--cascader-node-background-hover: $--background-color-base !default;  
 $--cascader-node-color-disabled:                        $color-text-secondary;
 //$--cascader-color-empty:$--color-text-placeholder !default;
 //$--cascader-tag-background: #f0f2f5;
